@@ -1,0 +1,21 @@
+<h1>【マスタ】県名</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>県名id</th>
+      <th>県名コード</th>
+      <th>県名</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @prefs.each do |pref| %>
+    <tr>
+      <td><%= pref.id %></td>
+      <td><%= pref.pref_code %></td>
+      <td><%= pref.pref_name %></td>
+     </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,664 @@
+<div class="headerImgBox">
+    <div class="headerImg">
+        <img src="/homeHeaderImg-1.svg" alt="トップページのヘッダー画像" class="topIndexHeaderImg">
+    </div>
+</div>
+
+
+
+<main class="mainBox">
+    <div class="prayMessageBox mt-4 mb-2">
+        <span class="prayMessageText">過去の地震ならびに災害により亡くなられた方々のご冥福をお祈りし、<br>被災された多くの方々に心よりお見舞い申し上げます。</span>
+    </div>
+
+<!-- article -1 -->
+    <article class="art_1 mx-auto d-block">
+        <section class="sect_1 mt-5">
+            <div class="container sectionBox">
+                <div class="row">
+                    <div class="container">
+                        <img src="/topTitle-01.svg" alt="" class="mb-3">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-9">
+                                    <p class="topMessageBox text-center">
+                                        <strong>「sakuSAKU防災チェック」へご来訪ありがとうございます。</strong><br>
+                                        本サイトでは、農林水産省Webサイトに掲載の情報を元に、<br>
+                                        <strong>ご家庭で必要とされる災害時の食品ストックについて、<br>
+                                        <span class="topContent">「必需品」</span>　<span class="topContent">「主食」</span>　<span class="topContent">「主菜」</span>の<br>必要備蓄量を世帯人数に応じて算出でる簡易的な備蓄チェックアプリす。</strong><br>
+                                        <span class="topContent">『ご家庭の備蓄チェック』</span>や<span class="topContent">『家族で防災について考えるきっかけ』</span>になれば幸いです。<br>
+                                        ※出典の詳細（農林水産省Webサイト）は、<%= link_to '出典情報', root_path(anchor: 'referenceInfo'), class: 'black' %>
+                                        をご参照の上、設定してください。
+                                    </p>
+                                </div>
+                                <div class="col-3">
+                                    <img src="/threePointImg01.svg" alt="" class="threePointImg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+
+<!-- article -2 -->
+    <article class="art_2 mx-auto d-block">
+        <section class="sect_1 mt-5">
+            <div class="container sectionBox">
+                <div class="container mx-auto d-block">
+                    <img src="/topTitle-02.svg" alt="" class="mb-3">
+                </div>
+                <div class="container-fluid">
+                    <p class="mainTextBox text-center">
+                        最短3分！片手でラクラクできます。<br>
+                        現在、<span class="answerCountNum"><%= @counts %></span>件のご利用をいただいております。ありがとうございます！<br>
+                        ※ご回答いただいた情報は、個人を特定しないオープンデータとして公開されます。
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 mb-3">
+                        <img src="/howtouse-01.svg" alt="使い方説明の画像-1" class="howtouseImg">
+                    </div>
+                    <div class="col-sm-4 mb-3">
+                        <img src="/howtouse-02.svg" alt="使い方説明の画像-2" class="howtouseImg">
+                    </div>
+                    <div class="col-sm-4 mb-3">
+                        <img src="/howtouse-03.svg" alt="使い方説明の画像-3" class="howtouseImg">
+                    </div>
+                </div>
+                <div class="container my-2">
+                    <div class="container-fluid mainTextBox mb-3">
+                        <h4 class="text-center my-auto">
+                            <strong>
+                            それでは早速、ご自宅の備蓄状況をチェックしてみましょう！<br>
+                            下の各アイコンの<span class="blackBtn">黒いボタン</span>から移動してください。
+                            </strong>
+                        </h4>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6 text-center">
+                            <div class="container d-block mx-auto btn-square-so-pop">
+                                <img src="/topLink-0.svg" alt="" class="topLinkBtn">
+                                <%= link_to '備蓄をチェック', new_answer_path ,class:"cp_btn d-block mx-auto"%>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 text-center">
+                            <div class="container d-block mx-auto btn-square-so-pop">
+                                <img src="/topLink-1.svg" alt="" class="topLinkBtn">
+                                <%= link_to '回答一覧を見る', answers_path ,class:"cp_btn d-block mx-auto"%>
+                            </div>
+                        </div>
+                    </div>
+    
+            </div>
+        </section>
+    </article> 
+
+<!-- article -3 -->
+    <article class="art_3 mx-auto d-block" id="referenceInfo">
+        <section class="sect_1 mt-5">
+            <div class="container sectionBox">
+                <div class="container mx-auto d-block">
+                        <img src="/topTitle-03_2.svg" alt="" class="mb-3">
+                        <div class="container-fluid">
+                            <p class="mainTextBox text-center">
+                                本サイトに掲載の備蓄品の情報は、以下の農林水産省Webサイトに<br>掲載の情報を加工して作成しております（令和元年12月時点）。
+                                <br>こちらでは、さらに詳細に「ローリングストック」としての備蓄の方法や、<br>野菜など「副菜」についても説明されています。
+                                <br>詳しい情報は以下のリンクよりご確認ください。
+                            </p>
+                            <div>
+                            <div class="sourceBox">
+                                <p>「出典情報」及び「出典元」は以下のリンクからご確認いただけます。※別ウインドウで外部サイトが開きます。</p>
+                                    <ul>
+                                        <li><a href="https://www.maff.go.jp/j/zyukyu/foodstock/guidebook.html" target="_blank" rel="noopener noreferrer">
+                                            出典:農林水産省Webサイト(https://www.maff.go.jp/j/zyukyu/foodstock/guidebook.html)</a></li>
+                                        <li><a href="https://www.maff.go.jp/j/zyukyu/foodstock/attach/pdf/guidebook-3.pdf" target="_blank" rel="noopener noreferrer">
+                                            「災害時に備えた食品ストックガイド(平成31年3月)」(農林水産省) </a>を加工して作成</li>
+                                        <!-- <li><a href="https://www.maff.go.jp/j/zyukyu/foodstock/guidebook/pdf/need_consideration_stockguide.pdf" target="_blank" rel="noopener noreferrer">
+                                        「要配慮者のための災害時に備えた食品ストックガイド(平成31年3月)」(農林水産省) </a>を加工して作成</li> -->
+                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </article>
+
+<!-- article -4 -->
+    <article class="art_4 mx-auto d-block" id="termsOfUse">
+        <section class="sect_1 mt-5">
+            <div class="container sectionBox">
+                <div class="container mx-auto d-block">
+                    <img src="/topTitle-04.svg" alt="" class="mb-3">
+                    <div class="container-fluid" id="termsOfUse">
+                        <div class="container my-3">
+                            <h4 class="text-center">「saku/SAKU 備蓄チェック」は、以下の利用規約をご確認の上ご利用ください。</h4>
+                            <div class="row mx-auto d-flex rulesText terms bg-light"  style="width:95%;max-height: 400px; overflow: auto;" >
+                                <div class="col-md-12">
+                                    <h4 class="featurette-heading font-weight-bold my-3">＜ ご利用規約 ＞</h4>
+                                    <p class="leadText mb-5 pl-3">本利用規約（以下「本規約」と言います。）には、「saku/SAKU 備蓄チェック」（以下「本サービス」と言います。）の提供条件及び当方とご利用者の皆様との間の権利義務関係が定められています。本サービスの利用に際しては、本規約の全文をお読みいただいたうえで、本規約に同意いただく必要があります。</p>
+                                
+                                    <div class="container" id="rule_01">
+                                    <h5 class="font-weight-bold">第1条（適用）</h3>
+                                    <div class="row">
+                                        <div class="col-sm-1 leadText text-right mb-5" >1.</div>
+                                        <div class="col-sm-11 leadText ">本規約は、本サービスの提供条件及び本サービスの利用に関する当方とご利用者との間の権利義務関係を定めることを目的とし、ご利用者と当方との間の本サービスの利用に関わる一切の関係に適用されます。 </div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="col-sm-1 leadText text-right" >2.</div>
+                                        <div class="col-sm-11 leadText ">本規約の内容と、前項のルールその他の本規約外における本サービスの説明等とが異なる場合は、本規約の規定が優先して適用されるものとします。 </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="container mt-4" id="rule_02">
+                                        <h5 class="font-weight-bold">第2条（定義）</h3>
+                                        <p class="leadText ">本規約において使用する以下の用語は、各々以下に定める意味を有するものとします。</p>
+                                        <div class="row">
+                                        <div class="col-sm-1 leadText text-right" >(1)</div>
+                                            <div class="col-sm-11 leadText ">「サービス利用契約」とは、本規約を契約条件として当方とご利用者の間で締結される、本サービスの利用契約を意味します。 </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(2)</div>
+                                            <div class="col-sm-11 leadText ">「知的財産権」とは、著作権、特許権、実用新案権、意匠権、商標権その他の知的財産権（それらの権利を取得し、またはそれらの権利につき登録等を出願する権利を含みます。）を意味します</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(3)</div>
+                                            <div class="col-sm-11 leadText ">「当方」とは、【saku/SAKU 備蓄チェック の運営者】を意味します。</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(4)</div>
+                                            <div class="col-sm-11 leadText ">「当方ウェブサイト」とは、そのドメインが「【sakusaku-bichikucheck】」である、当方が運営するウェブサイト（理由の如何を問わず、当方のウェブサイトのドメインまたは内容が変更された場合は、当該変更後のウェブサイトを含みます。）を意味します。</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(5)</div>
+                                            <div class="col-sm-11 leadText ">「ご利用者」とは、本サービスの利用者である個人または法人を意味します。</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(6)</div>
+                                            <div class="col-sm-11 leadText ">「本サービス」とは、当方が提供する【saku/SAKU 備蓄チェック】という名称のサービス（理由の如何を問わずサービスの名称または内容が変更された場合は、当該変更後のサービスを含みます。）を意味します。</div>
+                                        </div>
+                                        </div>
+                                    
+                                    <div class="container mt-4" id="rule_03">
+                                        <h5 class="font-weight-bold">第3条（本サービスの利用）</h3>
+                                        <div class="row">
+                                        <div class="col-sm-1 leadText text-right mb-5" >1.</div>
+                                            <div class="col-sm-11 leadText ">本サービスの利用をする者（以下「ご利用者」といいます。）は、本規約を遵守することに同意し、かつ当方の定める一定の個人を特定できない形での統計的な情報を当方の定める方法で当方に提供することに同意したものとします。 </div>
+                                        </div>
+                                        </div>
+                                    
+                                    <div class="container mt-4" id="rule_04">
+                                        <h5 class="font-weight-bold">第4条（禁止事項）</h3>
+                                        <p class="leadText">ご利用者は、本サービスの利用にあたり、以下の各号のいずれかに該当する行為または該当すると当方が判断する行為をしてはなりません。</p>
+                                        <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(1)</div>
+                                            <div class="col-sm-11 leadText ">法令に違反する行為または犯罪行為に関連する行為</div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(2)</div>
+                                            <div class="col-sm-11 leadText ">当方、本サービスの他の利用者またはその他の第三者に対する詐欺または脅迫行為</div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(3)</div>
+                                            <div class="col-sm-11 leadText ">公序良俗に反する行為</div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(4)</div>
+                                            <div class="col-sm-11 leadText ">当方、本サービスの他の利用者またはその他の第三者の知的財産権、肖像権、プライバシーの権利、名誉、その他の権利または利益を侵害する行為</div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(5)</div>
+                                            <div class="col-sm-11 leadText ">本サービスを通じ、以下に該当し、または該当すると当方が判断する情報を当方または本サービスの他の利用者に送信すること
+                                                <br>・過度に暴力的または残虐な表現を含む情報
+                                                ・コンピューター・ウィルスその他の有害なコンピューター・プログラムを含む情報
+                                                <br>・当方、本サービスの他の利用者またはその他の第三者の名誉または信用を毀損する表現を含む情報
+                                                <br>・過度にわいせつな表現を含む情報
+                                                <br>・差別を助長する表現を含む情報
+                                                <br>・自殺、自傷行為を助長する表現を含む情報
+                                                <br>・薬物の不適切な利用を助長する表現を含む情報
+                                                <br>・反社会的な表現を含む情報
+                                                <br>・チェーンメール等の第三者への情報の拡散を求める情報
+                                                <br>・他人に不快感を与える表現を含む情報                                
+                                            </div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(6)</div>
+                                                <div class="col-sm-11 leadText ">本サービスのネットワークまたはシステム等に過度な負荷をかける行為</div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(7)</div>
+                                            <div class="col-sm-11 leadText ">当方が提供するソフトウェアその他のシステムに対するリバースエンジニアリングその他の解析行為</div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(8)</div>
+                                            <div class="col-sm-11 leadText ">本サービスの運営を妨害するおそれのある行為</div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(9)</div>
+                                            <div class="col-sm-11 leadText ">当方のネットワークまたはシステム等への不正アクセス</div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(10)</div>
+                                            <div class="col-sm-11 leadText ">第三者に成りすます行為</div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(11)</div>
+                                            <div class="col-sm-11 leadText ">当方が事前に許諾しない本サービス上での宣伝、広告、勧誘、または営業行為</div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(12)</div>
+                                            <div class="col-sm-11 leadText ">本サービスの他の利用者の情報の収集</div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(13)</div>
+                                            <div class="col-sm-11 leadText ">当方、本サービスの他の利用者またはその他の第三者に不利益、損害、不快感を与える行為</div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(14)</div>
+                                            <div class="col-sm-11 leadText ">当方ウェブサイト上で掲載する本サービス利用に関するルール（https://www.）に抵触する行為</div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(15)</div>
+                                            <div class="col-sm-11 leadText ">反社会的勢力等への利益供与</div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(16)</div>
+                                            <div class="col-sm-11 leadText ">前各号の行為を直接または間接に惹起し、または容易にする行為</div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(17)</div>
+                                            <div class="col-sm-11 leadText ">前各号の行為を試みること</div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(18)</div>
+                                            <div class="col-sm-11 leadText ">その他、当方が不適切と判断する行為</div>
+                                            </div>
+                                        </div>
+                                        
+                                    <div class="container mt-4" id="rule_05">
+                                        <h5 class="font-weight-bold">第5条（本サービスの停止等）</h3>
+                                        <p class="leadText ">当方は、以下のいずれかに該当する場合には、ご利用者に事前に通知することなく、本サービスの全部または一部の提供を停止または中断することができるものとします。</p>
+                                        <div class="row">
+                                        <div class="col-sm-1 leadText text-right" >(1)</div>
+                                        <div class="col-sm-11 leadText ">本サービスに係るコンピューター・システムの点検または保守作業を緊急に行う場合</div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="col-sm-1 leadText text-right" >(2)</div>
+                                        <div class="col-sm-11 leadText ">コンピューター、通信回線等の障害、誤操作、過度なアクセスの集中、不正アクセス、ハッキング等により本サービスの運営ができなくなった場合</div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="col-sm-1 leadText text-right" >(3)</div>
+                                        <div class="col-sm-11 leadText ">地震、落雷、火災、風水害、停電、天災地変などの不可抗力により本サービスの運営ができなくなった場合</div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="col-sm-1 leadText text-right" >(4)</div>
+                                        <div class="col-sm-11 leadText ">その他、当方が停止または中断を必要と判断した場合</div>
+                                        </div>
+                                    </div>
+                                                
+                                    <div class="container mt-4" id="rule_06">
+                                        <h5 class="font-weight-bold">第6条（権利帰属）</h3>
+                                        <div class="row">
+                                        <div class="col-sm-1 leadText text-right mb-5" >1.</div>
+                                        <div class="col-sm-11 leadText ">当方ウェブサイト及び本サービスに関する知的財産権は全て当方または当方にライセンスを許諾している者に帰属しており、本規約に基づく本サービスの利用許諾は、当方ウェブサイトまたは本サービスに関する当方または当方にライセンスを許諾している者の知的財産権の使用許諾を意味するものではありません。</div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="col-sm-1 leadText text-right mb-5" >2.</div>
+                                        <div class="col-sm-11 leadText ">ご利用者は、作成したデータについて、自らが利用その他送信することについての適法な権利を有していること、及び作成したデータが第三者の権利を侵害していないことについて、当方に対し表明し、保証するものとします。</div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="col-sm-1 leadText text-right mb-5" >3.</div>
+                                        <div class="col-sm-11 leadText ">ご利用者は、当方及び当方から権利を承継しまたは許諾された者に対して著作者人格権を行使しないことに同意するものとします。</div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="container mt-4" id="rule_07">
+                                        <h5 class="font-weight-bold">第7条（本サービスの内容の変更、終了）</h3>
+                                        <div class="row">
+                                        <div class="col-sm-1 leadText text-right" >1.</div>
+                                        <div class="col-sm-11 leadText ">当方は、当方の都合により、本サービスの内容を変更し、または提供を終了することができます。</div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="col-sm-1 leadText text-right" >2.</div>
+                                        <div class="col-sm-11 leadText ">当方が本サービスの提供を終了する場合、当方はウェブサイト（https://www.）上にて通知するものとします。</div>
+                                        </div>
+                                        </div>
+                                
+                                        <div class="container mt-4" id="rule_08">
+                                            <h5 class="font-weight-bold">第8条（保証の否認及び免責）</h3>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >1.</div>
+                                            <div class="col-sm-11 leadText ">当方は、本サービスがご利用者の特定の目的に適合すること、期待する機能・商品的価値・正確性・有用性を有すること、ご利用者による本サービスの利用がご利用者に適用のある法令または業界団体の内部規則等に適合すること、継続的に利用できること、及び不具合が生じないことについて、明示又は黙示を問わず何ら保証するものではありません。</div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >2.</div>
+                                            <div class="col-sm-11 leadText ">当方は、本サービスに関してご利用者が被った一切の損害につき、賠償する責任を負わないものとし、また、付随的損害、間接損害、特別損害、将来の損害及び逸失利益にかかる損害については、賠償する一切の責任を負わないものとします。</div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >3.</div>
+                                            <div class="col-sm-11 leadText ">本サービスまたは当方ウェブサイトに関連してご利用者と他のご利用者または第三者との間において生じた取引、連絡、紛争等については、ご利用者が自己の責任によって解決するものとします。</div>
+                                            </div>
+                                        </div>
+                                
+                                        <div class="container mt-4" id="rule_09">
+                                            <h5 class="font-weight-bold">第9条（秘密保持）</h3>
+                                            <p class="leadText ">ご利用者は、本サービスに関連して当方がご利用者に対して秘密に取扱うことを求めて開示した非公知の情報について、当方の事前の書面による承諾がある場合を除き、秘密に取扱うものとします。</p>
+                                        </div>
+                                
+                                        <div class="container mt-4" id="rule_10">
+                                            <h5 class="font-weight-bold">第10条（利用者情報の取扱い）</h3>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >1.</div>
+                                            <div class="col-sm-11 leadText ">当方によるご利用者の利用者情報の取扱いについては、別途当方プライバシーポリシー（https://www.）の定めによるものとし、ご利用者はこのプライバシーポリシーに従って当方がご利用者の利用者情報を取扱うことについて同意するものとします。</div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >2.</div>
+                                            <div class="col-sm-11 leadText ">当方は、ご利用者が当方に提供した情報、データ等を、個人を特定できない形での統計的な情報として、当方の裁量で、利用及び公開（オープンデータとしての公開含む）することができるものとし、ご利用者はこれに異議を唱えないものとします。</div>
+                                            </div>
+                                        </div>
+                                
+                                        <div class="container mt-4" id="rule_11">
+                                            <h5 class="font-weight-bold">第11条（本規約等の変更）</h3>
+                                            <p class="leadText ">当方は、当方が必要と認めた場合は、本規約を変更できるものとします。本契約を変更する場合、変更後の本規約の施行時期及び内容を当方ウェブサイト上での掲示その他の適切な方法により周知し、またはご利用者に通知します。但し、法令上ご利用者の同意が必要となるような内容の変更の場合は、当方所定の方法でご利用者の同意を得るものとします。</p>
+                                        </div>
+                                    
+                                        <div class="container mt-4" id="rule_12">
+                                            <h5 class="font-weight-bold">第12条（連絡／通知）</h3>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >1.</div>
+                                            <div class="col-sm-11 leadText ">本サービスに関する問い合わせその他ご利用者から当方に対する連絡または通知、及び本規約の変更に関する通知その他当方からご利用者に対する連絡または通知は、当方の定める方法で行うものとします。</div>
+                                            </div>
+                                        </div>
+                                
+                                        <div class="container mt-4" id="rule_13">
+                                            <h5 class="font-weight-bold">第13条（サービス利用の地位の譲渡等）</h3>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >1.</div>
+                                            <div class="col-sm-11 leadText ">ご利用者は、当方の書面による事前の承諾なく、利用上の地位または本規約に基づく権利もしくは義務につき、第三者に対し、譲渡、移転、担保設定、その他の処分をすることはできません。</div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >2.</div>
+                                            <div class="col-sm-11 leadText ">当方は本サービスにかかる事業を他社に譲渡した場合には、当該事業譲渡に伴い利用契約上の地位、本規約に基づく権利及び義務並びに個人を特定できない形での統計的な情報を当該事業譲渡の譲受人に譲渡することができるものとし、ご利用者は、かかる譲渡につき本項において予め同意したものとします。なお、本項に定める事業譲渡には、通常の事業譲渡のみならず、会社分割その他事業が移転するあらゆる場合を含むものとします。</div>
+                                            </div>
+                                        </div>
+                                
+                                        <div class="container mt-4" id="rule_14">
+                                            <h5 class="font-weight-bold">第14条（分離可能性）</h3>
+                                            <p class="leadText ">本規約のいずれかの条項またはその一部が、法令等により無効または執行不能と判断された場合であっても、本規約の残りの規定及び一部が無効または執行不能と判断された規定の残りの部分は、継続して完全に効力を有するものとします。</p>
+                                        </div>
+                                
+                                        <div class="container mt-4" id="rule_15">
+                                            <h5 class="font-weight-bold">第15条（準拠法及び管轄裁判所）</h3>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >1.</div>
+                                            <div class="col-sm-11 leadText ">本規約及びサービス利用契約の準拠法は日本法とします。</div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >2.</div>
+                                            <div class="col-sm-11 leadText ">本規約またはサービス利用契約に起因し、または関連する一切の紛争については、大分地方裁判所を第一審の専属的合意管轄裁判所とします。</div>
+                                            </div>
+                                        </div>
+                                
+                                        <h6 class="pl-3" style="margin-top: 70px;">【令和二年三月一日制定】</h6>
+                                
+                                        
+                                
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+
+<!-- article -5 -->
+    <article class="art_5 mx-auto d-block" id="privacyPolicy">
+        <section class="sect_1 mt-5">
+            <div class="container sectionBox">
+                <div class="container mx-auto d-block">
+                    <img src="/topTitle-05.svg" alt="" class="mb-3">
+                    <div class="container-fluid">
+                        <div class="container my-3">
+                            <h4 class="text-center">「saku/SAKU 備蓄チェック」のプライバシーポリシーはこちらです。</h4>
+                            <div class="row mx-auto d-flex rulesText terms bg-light"  style="width:95%;max-height: 400px; overflow: auto;" >
+                                <div class="col-md-12">
+                                    <h4 class="featurette-heading font-weight-bold my-3">＜ プライバシポリシー ＞</h4>
+                                    <p class="leadText mb-5 pl-3">当方の提供するサービス「saku/SAKU 備蓄チェック」（以下「本サービス」といいます。）における、ユーザーについての個人情報を含む利用者情報の取扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」といいます。）を定めます。</p>
+
+                                    <div class="container" id="privacy_01">
+                                      <h5 class="font-weight-bold">1.        収集する利用者情報及び収集方法</h3>
+                                      <div class="row">
+                                        <div class="col-sm-1 leadText text-right mb-5" ></div>
+                                         <div class="col-sm-11 leadText ">本ポリシーにおいて、「利用者情報」とは、ユーザーの識別に係る情報、通信サービス上の行動履歴、その他ユーザーまたはユーザーの端末に関連して生成または蓄積された情報であって、本ポリシーに基づき当方が収集するものを意味するものとします。
+                                          本サービスにおいて当方が収集する利用者情報は、その収集方法に応じて、以下のようなものとなります。
+                                          </div>
+                                        </div>
+                                
+                                        <div class="row mt-3">
+                                            <div class="col-sm-1 leadText text-right font-weight-bold" >(1)</div>
+                                            <div class="col-sm-11 leadText "><span class=" font-weight-bold">ユーザーが本サービスを利用するにあたって、当方が収集する情報</span>
+                                              <br>本サービスの利用を通じてユーザーからご提供いただく情報は以下のとおりです。
+                                              <div class="my-3">
+                                                <li>本サービスの利用に際して、当方が定める方法を通じてユーザーが入力または送信する情報</li>
+                                                <li>メールでのお問い合わせその他当方が定める方法を通じてユーザーが入力または送信する情報</li>
+                                              </div>
+                                            </div>
+                                          </div>  
+
+                                          <div class="row">
+                                              <div class="col-sm-1 leadText text-right font-weight-bold" >(2)</div>
+                                              <div class="col-sm-11 leadText"><span class=" font-weight-bold">ユーザーからご提供いただく情報</span>
+                                                <br>2-1 当方は、ユーザーが本サービスの利用に際して入力する回答によって、個人を特定しない形で以下の情報を収集します。
+                                                <div class="my-3">
+                                                    <li>在住の都道府県名</li>
+                                                    <li>性別</li>
+                                                    <li>年齢</li>
+                                                    <li>職業</li>
+                                                    <li>住居の耐震対応</li>
+                                                    <li>住居（賃貸または持ち家）</li>
+                                                    <li>住居タイプ</li>
+                                                    <li>世帯人数</li>
+                                                    <li>世帯の内訳（成人と未成年）</li>
+                                                    <li>ユーザーの備蓄状況に関する回答</li>
+                                                    </div>
+                                                <br>2-2 当方は、本サービスへのアクセス状況やそのご利用方法に関する情報を収集することがあります。これには以下の情報が含まれます。
+                                                <div class="my-3">
+                                                  <li>リファラ</li>
+                                                  <li>IPアドレス</li>
+                                                  <li>サーバーアクセスログに関する情報</li>
+                                                  <li>Cookie、ADID、IDFAその他の識別子</li>
+                                                </div>
+                                              </div>
+                                            </div>
+                                    
+                                      </div>
+                                
+                                    <div class="container mt-4" id="privacy_02">
+                                        <h5 class="font-weight-bold">2.        利用目的</h3>
+                                        <p class="leadText ">本サービスのサービス提供にかかわる利用者情報の具体的な利用目的は以下のとおりです。</p>
+                                        <div class="row">
+                                          <div class="col-sm-1 leadText text-right" >(1)</div>
+                                            <div class="col-sm-11 leadText ">ユーザーのトラフィック測定及び行動測定のため </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(2)</div>
+                                            <div class="col-sm-11 leadText ">ユーザーの回答により収集した情報をオープンデータとして公開するため</div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(3)</div>
+                                            <div class="col-sm-11 leadText ">本サービスに関するご案内、お問い合わせ等への対応のため</div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(4)</div>
+                                            <div class="col-sm-11 leadText ">本サービスに関する当方の規約、ポリシー等（以下「規約等」といいます。）に違反する行為に対する対応のため</div>
+                                          </div>
+                                        </div>
+                                    
+                                    <div class="container mt-4" id="privacy_03">
+                                        <h5 class="font-weight-bold">3.        情報収集モジュールの有無</h3>
+                                        <div class="row">
+                                          <div class="col-sm-1 leadText text-right mb-5" >3-1</div>
+                                            <div class="col-sm-11 leadText ">本サービスには以下の情報収集モジュールが組み込まれています。これに伴い、以下のとおり情報収集モジュール提供者（日本国外にある者を含みます。）への利用者情報の提供を行います。</div>
+                                          </div>
+                                
+                                          <div class="row">
+                                            <table class="table table-bordered border border-dark priceTable">
+                                              <tr>
+                                                <td>(1)        情報収集モジュールの名称</td>
+                                                <td>Google Analytics</td>
+                                              </tr>
+                                              <tr>
+                                                  <td>(2)        情報収集モジュールの提供者</td>
+                                                  <td>Google Inc.</td>
+                                                </tr>
+                                                <tr>
+                                                  <td>(3)        提供される利用者情報の項目</td>
+                                                  <td>・リファラ
+                                                      ・IPアドレス
+                                                      ・サーバーアクセスログに関する情報
+                                                      ・Cookie、ADID、IDFAその他の識別子</td>
+                                                    </tr>
+                                              </table>
+                                          </div>
+                                
+                                          <p class="leadText mb-5 pl-3">このGoogleアナリティクスはトラフィックデータの収集のためにCookieを使用しています。このトラフィックデータは匿名で収集されており、個人を特定するものではありません。この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。
+                                            Googleアナリティクスについての詳しくは、<a href="https://marketingplatform.google.com/about/analytics/terms/jp/" target="_blank">こちら</a>と<a href="http://www.google.com/privacy.html " target="_blank">こちら</a>をご参照ください。
+                                            
+                                        <br>
+                                          Googleアナリティクスによるデータ収集を無効にしたい場合は、
+                                        <a href="https://support.google.com/analytics/answer/181881?hl=ja" target="_blank">
+                                          こちら</a> をご参照の上、設定してください。  </p>
+                                            </div>
+
+                                    <div class="container mt-4" id="privacy_04">
+                                        <h5 class="font-weight-bold">4.        第三者提供</h3>
+                                        <p class="leadText">当方は、利用者情報のうち、個人情報については、あらかじめユーザーの同意を得ないで、第三者（日本国外にある者を含みます。）に提供しません。但し、次に掲げる必要があり第三者（日本国外にある者を含みます。）に提供する場合はこの限りではありません。
+                                          </p>
+                                        <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(1)</div>
+                                            <div class="col-sm-11 leadText ">当方が利用目的の達成に必要な範囲内において個人情報の取扱いの全部または一部を委託する場合</div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(2)</div>
+                                            <div class="col-sm-11 leadText ">合併その他の事由による事業の承継に伴って個人情報が提供される場合</div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(3)</div>
+                                            <div class="col-sm-11 leadText ">第4項の定めに従って、提携先または情報収集モジュール提供者へ個人情報が提供される場合</div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(4)</div>
+                                            <div class="col-sm-11 leadText ">国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって、ユーザーの同意を得ることによって当該事務の遂行に支障を及ぼすおそれがある場合</div>
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-sm-1 leadText text-right" >(5)</div>
+                                            <div class="col-sm-11 leadText ">その他、個人情報の保護に関する法律（以下「個人情報保護法」といいます。）その他の法令で認められる場合                               
+                                            </div>
+                                            </div>
+                                        </div>
+                                          
+                                    <div class="container mt-4" id="privacy_05">
+                                        <h5 class="font-weight-bold">5.        個人情報の開示</h3>
+                                        <p class="leadText ">当方は、ユーザーから、個人情報保護法の定めに基づき個人情報の開示を求められたときは、ユーザーご本人からのご請求であることを確認の上で、ユーザーに対し、遅滞なく開示を行います（当該個人情報が存在しないときにはその旨を通知いたします。）。但し、個人情報保護法その他の法令により、当方が開示の義務を負わない場合は、この限りではありません。なお、個人情報の開示につきましては、手数料（1件あたり1,000円）を頂戴しておりますので、あらかじめ御了承ください。</p>
+                                      </div>
+                                                
+                                    <div class="container mt-4" id="privacy_06">
+                                        <h5 class="font-weight-bold">6.        個人情報の訂正及び利用停止等</h3>
+                                        <div class="row">
+                                        <div class="col-sm-1 leadText text-right mb-5" >6-1</div>
+                                        <div class="col-sm-11 leadText ">当方は、ユーザーから、(1)個人情報が真実でないという理由によって個人情報保護法の定めに基づきその内容の訂正を求められた場合、及び(2)あらかじめ公表された利用目的の範囲を超えて取扱われているという理由または偽りその他不正の手段により収集されたものであるという理由により、個人情報保護法の定めに基づきその利用の停止を求められた場合には、ユーザーご本人からのご請求であることを確認の上で遅滞なく必要な調査を行い、その結果に基づき、個人情報の内容の訂正または利用停止を行い、その旨をユーザーに通知します。なお、訂正または利用停止を行わない旨の決定をしたときは、ユーザーに対しその旨を通知いたします。</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-1 leadText text-right mb-5" >6-2</div>
+                                            <div class="col-sm-11 leadText ">当方は、ユーザーから、ユーザーの個人情報について消去を求められた場合、当方が当該請求に応じる必要があると判断した場合は、ユーザーご本人からのご請求であることを確認の上で、個人情報の消去を行い、その旨をユーザーに通知します。</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-1 leadText text-right mb-5" >6-3</div>
+                                                <div class="col-sm-11 leadText ">個人情報保護法その他の法令により、当方が訂正等または利用停止等の義務を負わない場合は、6-1および6-2の規定は適用されません。</div>
+                                                </div>
+                                     </div>
+                                
+                                      <div class="container mt-4" id="privacy_07">
+                                          <h5 class="font-weight-bold">7.        お問い合わせ窓口</h3>
+                                          <p class="leadText ">ご意見、ご質問、苦情のお申出その他利用者情報の取扱いに関するお問い合わせは、管理人まで下記の連絡先へお願いいたします。※ご返信にお時間を要する場合がございます。予めご了承ください。</p>
+                                          <div class="row border border-dark">
+                                            <div class="col-sm-2 leadText text-center border-right border-dark" >連絡先</div>
+                                            <div class="col-sm-5 leadText "><a href="mailto:infosakusaku@gmail.com">infosakusaku@gmail.com</a></div>
+                                          </div>
+                                      </div>
+                                    <div class="container mt-4" id="privacy_08">
+                                        <h5 class="font-weight-bold">8.        プライバシーポリシーの変更手続</h3>
+                                        <p class="leadText ">当方は、必要に応じて、本ポリシーを変更します。但し、法令上ユーザーの同意が必要となるような本ポリシーの変更を行う場合、変更後の本ポリシーは、当方所定の方法で変更に同意したユーザーに対してのみ適用されるものとします。なお、当方は、本ポリシーを変更する場合には、変更後の本ポリシーの施行時期及び内容を当方のウェブサイト上での表示その他の適切な方法により周知し、またはユーザーに通知します。</p>
+                                    </div>
+                                        <h6 class="pl-3" style="margin-top: 70px;">【令和二年三月一日制定】</h6>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+
+<!-- article -6 -->
+    <article class="art_6 mx-auto d-block" id="aboutUs">
+        <section class="sect_1 mt-5">
+            <div class="container sectionBox">
+                <div class="container mx-auto d-block">
+                    <img src="/topTitle-06.svg" alt="" class="mb-3">
+                        <div class="container-fluid">
+                            <p class="mainTextBox text-center">
+                            　この度は「sakuSAKU備蓄チェック」へアクセスいただきありがとうございます。
+                            <br>はじめまして。<span class="aboutUsContent">運営者の「えどっち」です。</span>
+                            <br>このアプリは、家族で何となく防災用の備蓄の話しをしている時の母との会話がきっかけでした。
+                            <br><span class="aboutUsContent">母「実際、備蓄って何がどれだけあればいいの？」</span>と。
+                            <br><span class="aboutUsContent">私「そりゃ、水とかお米とか。。。あと、何だっけ・？」。。。</span>
+                            <br>私自身、東日本大震災を東京で経験していたのですが、いつの間にか自分の中でその時に感じた危機感が
+                            <br>時が経つにつれて薄れていることに気付きました。
+                            <br>日本は地震大国と言われ、南海トラフ地震を筆頭に発生が予想される大地震もあり、また近年は異常気象により
+                            <br>台風などの被害もこれまで以上に甚大となって来ています。
+                            <br>さらに今は新型コロナウイルスという未知のウイルスまで出現しています。
+                            <br>このような状況の中で、日々の生活を守る為に日頃から備えることは大変重要ではないかと考えます。
+                            <br>このアプリは <%= link_to '出典情報', root_path(anchor: 'referenceInfo'), class: 'mx-1' %>に記載の「災害時に備えた食品ストックガイド(平成31年3月)」(農林水産省) に
+                            <br>記載の情報を参考に作成しております。
+                            <br>基本的な必需品の１週間分で必要な内容と量のイメージが把握できるのではないかと思います。
+                            <br><span class="aboutUsContent">もちろん、各ご家庭ごとに必要な物は違ってくるでしょう。</span>
+                            <br>乳幼児がいるご家庭ではミルクやオムツも必要でしょうし、住んでいる地域によっても違ってくるかもしれません。
+                            <br>この「sakuSAKU備蓄チェック」が<span class="aboutUsContent">ご家庭での備蓄を考える一つのきっかけになってくれる</span>と幸いです。
+                            <br>
+                            </p>
+                            <hr>
+                            <div class="container emailBox">
+                                <p class="my-auto">ご意見・ご要望などはこちらまで。ご連絡に時間を要する場合があります。予めご了承ください。
+                                <br>メールアドレス：<a href="mailto:infosakusaku@gmail.com">infosakusaku@gmail.com</a></br>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+    <div class="container my-5">
+        <h5 class="text-center mb-2">お知らせ</h5>
+        <div class="mx-auto d-flex ">
+            <div class="top_news px-2">
+                <div class="container mb-1 p-2">
+                <div class="row">
+                    <span class="col-sm-3">2020年3月12日</span>
+                    <span class="col-sm-9"> <span> sakuSAKU備蓄チェック　オープンしました。</span>
+                </div>
+                <%# <hr style="margin-top: 0px; margin-bottom: 8px;"> %>
+                </div>       
+            </div>
+        </div>
+    </div>
+
+    </article>
+
+</main>
+

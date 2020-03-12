@@ -1,0 +1,21 @@
+<h1>【マスタ】年代</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>年代id</th>
+      <th>年代コード</th>
+      <th>年代</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ages.each do |age| %>
+    <tr>
+      <td><%= age.id %></td>
+      <td><%= age.age_code %></td>
+      <td><%= age.age_period %></td>
+     </tr>
+    <% end %>
+  </tbody>
+</table>

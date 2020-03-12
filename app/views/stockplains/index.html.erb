@@ -1,0 +1,23 @@
+<h1>【マスタ】基準備蓄数</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>備蓄品id</th>
+      <th>備蓄品コード</th>
+      <th>備蓄品名</th>
+      <th>基準数</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stockplains.each do |stockplain| %>
+    <tr>
+      <td><%= stockplain.id %></td>
+      <td><%= stockplain.stock_code %></td>
+      <td><%= stockplain.stock_name %></td>
+       <td><%= stockplain.stock_quantity %></td>
+     </tr>
+    <% end %>
+  </tbody>
+</table>

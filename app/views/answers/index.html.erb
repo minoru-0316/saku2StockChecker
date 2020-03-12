@@ -1,0 +1,86 @@
+<div class="headerImgBox">
+    <div class="headerImg">
+        <img src="/indexHeaderImg-02.svg" alt="回答一覧ページのヘッダー画像" class="answersIndexHeaderImg bg-dark">
+    </div>
+</div>
+
+<main class="mainBox">
+    
+<!-- article -1 -->
+    <article class="art_1 mx-auto d-block">
+        <section class="sect_1 mt-5">
+            <div class="container sectionBox">
+                <div class="row">
+                    <div class="container mb-3">
+                      <img src="/topTitle01.svg" alt="" class="mb-3">
+                        <div class="container-fluid">
+                            <p class="mainTextBox text-center">
+                                これまでに、
+                                <span class="answerCountNum"> <%= @counts %> </span>件のご利用がありました！　<br>ありがとうございます！
+                            </p>
+                        </div>
+                      <div class="mx-auto" style="width:95%; max-height: 500px; overflow: auto;">
+                        <table border="1" class="answerTable">
+                          <thead>
+                            <tr>
+                              <th class="answerCol_1" colspan="7">回答者情報</th>
+                              <th class="answerCol_2" colspan="12">備蓄状況</th>
+                            </tr>
+                            <tr>
+                                <th class="userCol">都道府県</th>
+                                <th class="userCol">性別</th>
+                                <th class="userCol">年齢</th>
+                                <th class="userCol">職業</th>
+                                <th class="userCol">世帯人数</th>
+                                <th class="userCol">内訳（成人）</th>
+                                <th class="userCol">内訳（未成年）</th>
+                                <th class="answerCol">飲料水（２リットル）</th>
+                                <th class="answerCol">カセットコンロ</th>
+                                <th class="answerCol">カセットボンベ</th>
+                                <th class="answerCol">白米（１袋=2kg）</th>
+                                <th class="answerCol">乾麺（1袋 = 300g）</th>
+                                <th class="answerCol">乾麺・パスタ（1袋 = 600g）</th>
+                                <th class="answerCol">カップ麺</th>
+                                <th class="answerCol">パックご飯</th>
+                                <th class="answerCol">その他・シリアル</th>
+                                <th class="answerCol">レトルト食品-1</th>
+                                <th class="answerCol">レトルト食品-2</th>
+                                <th class="answerCol">缶詰（肉・魚）</th>
+                            </tr>
+                          </thead>
+
+                          <tbody>
+                            <% @answers.each do |answer| %>
+                            <tr>
+                                <td><%= answer.pref_name %></td>
+                                <td><%= answer.gender_type %></td>
+                                <td><%= answer.age_period %></td>
+                                <td><%= answer.job_name %></td>
+                                <td><%= answer.household_size %></td>
+                                <td><%= answer.adult_num %></td>
+                                <td><%= answer.minor_num %></td>
+
+                                <td><%= answer.bottolwater_2L %></td>
+                                <td><%= answer.cooking_stove %></td>
+                                <td><%= answer.cassette_gas %></td>
+                                <td><%= answer.rice_2kg %></td>
+                                <td><%= answer.dried_noodle %></td>
+                                <td><%= answer.dried_pasta %></td>
+                                <td><%= answer.cupped_noodle %></td>
+                                <td><%= answer.packed_rice %></td>
+                                <td><%= answer.cereal_etc %></td>
+                                <td><%= answer.retort_food1 %></td>
+                                <td><%= answer.retort_food2 %></td>
+                                <td><%= answer.canned_food %></td>
+                              </tr>
+                            <% end %>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+
+</main>

@@ -1,0 +1,21 @@
+<h1>【マスタ】性別</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>性別id</th>
+      <th>性別コード</th>
+      <th>性別</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @genders.each do |gender| %>
+    <tr>
+      <td><%= gender.id %></td>
+      <td><%= gender.gender_code %></td>
+      <td><%= gender.gender_type %></td>
+     </tr>
+    <% end %>
+  </tbody>
+</table>

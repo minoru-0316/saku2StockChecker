@@ -1,0 +1,217 @@
+<div class="headerImgBox" id="headerImg">
+    <div class="headerImg">
+        <img src="/showHeaderImg-04.svg" alt="新規アンケート回答ページのヘッダー画像" class="answersNewHeaderImg">
+    </div>
+</div>
+
+<main class="mainBox">
+    
+<!-- article -1 -->
+    <article class="art_1 mx-auto" id="art_1_showBox">
+      <section class="sect_1 mt-5" id="box1">
+        <div class="container sectionBox">
+            <div class="row">
+                <div class="container">
+                    <img src="/showTitle01.svg" alt="" class="mb-3">
+                    <div class="container-fluid mainTextBox mb-3">
+                          <p class="text-center my-auto mb-3">
+                              <strong>
+                              「sakuSAKU 備蓄チェック」のご利用ありがとうございます。<br>
+                              結果はいかがでしたか？<br>
+                              「想像していたよりも目安量が多くてビックリ！」された方もいらっしゃったかも知れませんね。<br>
+                                目安量は、出典元の厚生労働省の情報です。あくまで目安ですのでこちらの結果を参考にして<br>
+                                家族構成や状況に合わせた備蓄を考えるきっかけにされてはいかがでしょうか。
+                              </strong>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+               <!-- 備蓄リスト -->
+                  <div class="container">
+                      <div class="mx-auto d-block text-center">
+                        <h2 class="py-3 showWeeklyText"><span class="bg-danger p-2 weeklyText">１週間分の目安量</span> × <%= @answer.household_size %>人分（世帯人数）</h2>
+                        <h3 class="py-3 showWeeklyText">回答日：<%= @answer.created_at.strftime('%Y年%m月%d日')  %></h3>
+
+                        <div>
+                          <table class="showtable mb-3" border="1" class="answerTable">
+                            <thead>
+                              <tr>
+                                <th colspan="4">整理番号：<%= @answer.id %></th>
+                              </tr>
+                            </thead>
+                            <thead class="tableHeaderBox">
+                              <tr>
+                                <th class="tableHeader">備蓄品名</th>
+                                <th class="tableHeader">あなたの備蓄</th>
+                                <th class="tableHeader">１週間分の目安</th>
+                                <th class="tableHeader">判定</th>
+                                </tr>
+                            </thead>
+                              <tr>
+                                <td class="itemName"><img src="/itemIcon-001.svg" alt="飲料水の画像" class="m-1 stockItemImg pr-2"><strong>飲料水（２リットル）</strong></td>
+                                <td id="answer0"> <span class="answer"><%= @answer.bottolwater_2L %></span><small> 本</small></td>
+                                <td id="require0"> <span class="required"><%= @answer.required_water %></span><small> 本</small></td>
+                                <td style="width:100px">
+                                  <% if @answer.result_water == true %>
+                                    <img src="/stocktrueimg.svg" alt="判定がfalseの画像" class="m-1 stockFalseImg0">
+                                  <% elsif @answer.result_water == false %>
+                                    <img src="/stockfalseimg.svg" alt="判定がtrueの画像" class="m-1 stockTrueImg0">
+                                  <% end %>
+                                </td>
+                              </tr>
+                  
+                              <tr>
+                                <td class="itemName"><img src="/itemIcon-002.svg" alt="カセットコンロの画像" class="m-1 stockItemImg pr-2"><strong>カセットコンロ</strong></td>
+                                <td id="answer1"> <span class="answer"><%= @answer.cooking_stove %></span><small> 台</small></td>
+                                <td id="require1"> <span class="required"><%= @answer.required_stove %></span><small> 台</small></td>
+                                <td style="width:100px">
+                                  <% if @answer.result_stove == true %>
+                                    <img src="/stocktrueimg.svg" alt="判定がfalseの画像" class="m-1 stockFalseImg0">
+                                  <% elsif @answer.result_stove == false %>
+                                    <img src="/stockfalseimg.svg" alt="判定がtrueの画像" class="m-1 stockTrueImg0">
+                                  <% end %>
+                                </td>
+                              </tr>
+                              
+                              <tr>
+                                <td class="itemName"><img src="/itemIcon-003.svg" alt="カセットボンベの画像" class="m-1 stockItemImg pr-2"><strong>カセットボンベ</strong></td>
+                                <td id="answer2"> <span class="answer"><%= @answer.cassette_gas %></span><small> 本</small></td>
+                                <td id="require2"> <span class="required"><%= @answer.required_gas %></span><small> 本</small></td>
+                                <td style="width:100px">
+                                  <% if @answer.result_gas == true %>
+                                    <img src="/stocktrueimg.svg" alt="判定がfalseの画像" class="m-1 stockFalseImg0">
+                                  <% elsif @answer.result_gas == false %>
+                                    <img src="/stockfalseimg.svg" alt="判定がtrueの画像" class="m-1 stockTrueImg0">
+                                  <% end %>
+                                </td>
+                              </tr>
+                  
+                              <tr>
+                                <td class="itemName"><img src="/itemIcon-004.svg" alt="白米の画像" class="m-1 stockItemImg pr-2"><strong>白米（１袋=2kg）</strong></td>
+                                <td id="answer3"> <span class="answer"><%= @answer.rice_2kg %></span><small> kg</small></td>
+                                <td id="require3"> <span class="required"><%= @answer.required_rice %></span><small> kg</small></td>
+                                <td style="width:100px">
+                                  <% if @answer.result_rice == true %>
+                                    <img src="/stocktrueimg.svg" alt="判定がfalseの画像" class="m-1 stockFalseImg0">
+                                  <% elsif @answer.result_rice == false %>
+                                    <img src="/stockfalseimg.svg" alt="判定がtrueの画像" class="m-1 stockTrueImg0">
+                                  <% end %>
+                                </td>
+                              </tr>
+                  
+                              <tr>
+                                <td class="itemName"><img src="/itemIcon-005.svg" alt="乾麺の画像" class="m-1 stockItemImg pr-2"><strong>乾麺（1袋 = 300g）</strong></td>
+                                <td id="answer4"> <span class="answer"><%= @answer.dried_noodle %></span><small> 袋</small></td>
+                                <td id="require4"> <span class="required"><%= @answer.required_noodle %></span><small> 袋</small></td>
+                                <td style="width:100px">
+                                  <% if @answer.result_noodle == true %>
+                                    <img src="/stocktrueimg.svg" alt="判定がfalseの画像" class="m-1 stockFalseImg0">
+                                  <% elsif @answer.result_noodle == false %>
+                                    <img src="/stockfalseimg.svg" alt="判定がtrueの画像" class="m-1 stockTrueImg0">
+                                  <% end %>
+                                </td>
+                              </tr>
+                  
+                              <tr>
+                                <td class="itemName"><img src="/itemIcon-006.svg" alt="パスタ麺の画像" class="m-1 stockItemImg pr-2"><strong>パスタ乾麺(1袋=600g)</strong></td>
+                                <td id="answer5"> <span class="answer"><%= @answer.dried_pasta %></span><small> 袋</small></td>
+                                <td id="require5"> <span class="required"><%= @answer.required_pasta %></span><small> 袋</small></td>
+                                <td style="width:100px">
+                                  <% if @answer.result_pasta == true %>
+                                    <img src="/stocktrueimg.svg" alt="判定がfalseの画像" class="m-1 stockFalseImg0">
+                                  <% elsif @answer.result_pasta == false %>
+                                    <img src="/stockfalseimg.svg" alt="判定がtrueの画像" class="m-1 stockTrueImg0">
+                                  <% end %>
+                                </td>
+                              </tr>
+                  
+                              <tr>
+                                <td class="itemName"><img src="/itemIcon-007.svg" alt="カップ麺の画像" class="m-1 stockItemImg pr-2"><strong>カップ麺</strong></td>
+                                <td id="answer6"> <span class="answer"><%= @answer.cupped_noodle %></span><small> 個</small></td>
+                                <td id="require6"> <span class="required"><%= @answer.required_cpnoodle %></span><small> 個</small></td>
+                                <td style="width:100px">
+                                  <% if @answer.result_cpnoodle == true %>
+                                    <img src="/stocktrueimg.svg" alt="判定がfalseの画像" class="m-1 stockFalseImg0">
+                                  <% elsif @answer.result_cpnoodle == false %>
+                                    <img src="/stockfalseimg.svg" alt="判定がtrueの画像" class="m-1 stockTrueImg0">
+                                  <% end %>
+                                </td>
+                              </tr>
+                  
+                              <tr>
+                                <td class="itemName"><img src="/itemIcon-008.svg" alt="パックごはんの画像" class="m-1 stockItemImg pr-2"><strong>パックご飯</strong></td>
+                                <td id="answer7"> <span class="answer"><%= @answer.packed_rice %></span><small> 個</small></td>
+                                <td id="require7"> <span class="required"><%= @answer.required_pkrice %></span><small> 個</small></td>
+                                <td style="width:100px">
+                                  <% if @answer.result_pkrice == true %>
+                                    <img src="/stocktrueimg.svg" alt="判定がfalseの画像" class="m-1 stockFalseImg0">
+                                  <% elsif @answer.result_pkrice == false %>
+                                    <img src="/stockfalseimg.svg" alt="判定がtrueの画像" class="m-1 stockTrueImg0">
+                                  <% end %>
+                                </td>
+                              </tr>
+                  
+                              <tr>
+                                <td class="itemName"><img src="/itemIcon-009.svg" alt="シリアルの画像" class="m-1 stockItemImg pr-2"><strong>その他・シリアルなど</strong></td>
+                                <td id="answer8"> <span class="answer"><%= @answer.cereal_etc %></span><small> 個</small></td>
+                                <td id="require8"> <span class="required"><%= @answer.required_etc %></span><small> 個</small></td>
+                                <td style="width:100px">
+                                  <% if @answer.result_etc == true %>
+                                    <img src="/stocktrueimg.svg" alt="判定がfalseの画像" class="m-1 stockFalseImg0">
+                                  <% elsif @answer.result_etc == false %>
+                                    <img src="/stockfalseimg.svg" alt="判定がtrueの画像" class="m-1 stockTrueImg0">
+                                  <% end %>
+                                </td>
+                              </tr>
+                  
+                              <tr>
+                                <td class="itemName"><img src="/itemIcon-010.svg" alt="レトルト食品１の画像" class="m-1 stockItemImg pr-2"><strong>レトルト食品-1</strong></td>
+                                <td id="answer9"> <span class="answer"><%= @answer.retort_food1 %></span><small> 個</small></td>
+                                <td id="require9"> <span class="required"><%= @answer.required_retort_1 %></span><small> 個</small></td>
+                                <td style="width:100px">
+                                  <% if @answer.result_retort_1 == true %>
+                                    <img src="/stocktrueimg.svg" alt="判定がfalseの画像" class="m-1 stockFalseImg0">
+                                  <% elsif @answer.result_retort_1 == false %>
+                                    <img src="/stockfalseimg.svg" alt="判定がtrueの画像" class="m-1 stockTrueImg0">
+                                  <% end %>
+                                </td>
+                              </tr>
+                  
+                              <tr>
+                                <td class="itemName"><img src="/itemIcon-011.svg" alt="レトルト食品２の画像" class="m-1 stockItemImg pr-2"><strong>レトルト食品-2</strong></td>
+                                <td id="answer10"> <span class="answer"><%= @answer.retort_food2 %></span><small> 個</small></td>
+                                <td id="require10">  <span class="required"><%= @answer.required_retort_2 %></span><small> 個</small></td>
+                                <td style="width:100px">
+                                  <% if @answer.result_retort_2 == true %>
+                                    <img src="/stocktrueimg.svg" alt="判定がfalseの画像" class="m-1 stockFalseImg0">
+                                  <% elsif @answer.result_retort_2 == false %>
+                                    <img src="/stockfalseimg.svg" alt="判定がtrueの画像" class="m-1 stockTrueImg0">
+                                  <% end %>
+                                </td>
+                              </tr>
+                  
+                              <tr>
+                                <td class="itemName"><img src="/itemIcon-012.svg" alt="缶詰の画像" class="m-1 stockItemImg pr-2"><strong>缶詰（肉・魚）</strong></td>
+                                <td id="answer11"> <span class="answer"><%= @answer.canned_food %></span><small> 個</small></td>
+                                <td id="require11"> <span class="required"><%= @answer.required_canned %></span><small> 個</small></td>
+                                <td style="width:100px">
+                                  <% if @answer.result_canned == true %>
+                                    <img src="/stocktrueimg.svg" alt="判定がfalseの画像" class="m-1 stockFalseImg0">
+                                  <% elsif @answer.result_canned == false %>
+                                    <img src="/stockfalseimg.svg" alt="判定がtrueの画像" class="m-1 stockTrueImg0">
+                                  <% end %>
+                                </td>
+                              </tr>
+                          </table>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </section>
+    </article>
+</main>
+
+
