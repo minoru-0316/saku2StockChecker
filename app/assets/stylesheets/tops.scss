@@ -1,3 +1,181 @@
 // Place all the styles related to the tops controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+#nav ul li{         
+    display: inline;
+ } 
+
+ #nav ul li a{         
+    color: white;
+ } 
+.showtable {
+    width: 80%;
+    margin: 0 auto ;
+}
+
+.sectionBox {
+  text-decoration: none;
+  background: #fadf44;
+  border-top: solid 2px whitesmoke;
+  border-bottom: solid 6px #15161a;
+  border-right: solid 2px #242427;
+  border-left: solid 2px #242427;
+  border-radius: 3px;
+}
+
+.prayMessageBox {
+  background-color:white;
+  margin: 10px auto;
+  text-align: center;
+
+}
+.prayMessageText {
+  font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 90%;
+  margin: 10px auto;
+}
+.topMessageBox {
+    background-color: #fff7cc;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    padding: 10px;
+}
+.mainTextBox {
+  background-color: #fff7cc;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  padding: 10px;
+}
+.headerImg {
+    box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.6);
+  }
+
+  article {
+    box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.6);
+    padding-bottom: 24px;
+  }
+
+  .howtouseImg {
+    background-color: #fff7cc;
+    border-radius: 10px;
+    border-bottom: solid 2px white;
+}
+
+.topLinkBtn {
+  width: 35%
+}
+
+a.cp_btn {
+        display: block;
+        position: relative;
+        width: 200px;
+  padding: 0.8em;
+        text-align: center;
+        text-decoration: none;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bolder;
+        border:1px solid black;
+        background: black;
+        overflow: hidden;
+  z-index: 1 !important;
+  box-shadow:0px 13px 12px -11px #fff;
+}
+a.cp_btn:after {
+        content:"";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 0;
+        width: 100%;
+        background : yellow;
+        opacity: 0;
+        transform: translateX(-50%) translateY(-50%) rotate(45deg);
+        transition: 0.3s;
+  z-index: -1;
+}
+a.cp_btn:hover {
+        color: #da3c41;
+}
+a.cp_btn:hover:after {
+        height: 250%;
+        opacity: 1;
+}
+a.cp_btn:active:after {
+        height: 350%;
+        opacity: 1;
+}
+
+.blackBtn {
+  background-color: black;
+  color: white;
+  margin: 20px;
+  padding: 3px;
+  line-height: 40px;
+}
+
+.btn-square-so-pop {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  text-decoration: none;
+  // color: #FFF;
+  // background: #fd9535;/*色*/
+  border-radius: 4px;/*角の丸み*/
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+  font-weight: bold;
+  border: solid 2px #d27d00;/*線色*/
+  margin-bottom: 10px
+}
+
+.btn-square-so-pop:hover {
+  /*押したとき*/
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);/*沈むように*/
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  background-image: linear-gradient(#fcf4f7 0%, #ffffff 100%);/*グラデーションを明るく*/
+}
+
+.terms {
+  border: 1px solid #ccc;
+  font-size: 12px;
+}
+
+.topContent {
+  font-weight: bold;
+  font-size: 1.5rem;
+  background: linear-gradient(transparent 60%, rgb(252, 116, 116) 0%);
+}
+
+.emailBox, .sourceBox {
+  border: 1px solid whitesmoke;
+  background-color: white;
+  border-radius: 4px;/*角の丸み*/
+  margin-bottom: 15px;
+}
+
+.aboutUsContent {
+  font-weight: bold;
+  font-size: 1.5rem;
+  background: linear-gradient(transparent 60%, rgb(252, 250, 116) 0%);
+}
+
+.top_news {
+  list-style: none;
+  max-width: 800px;
+  width: 100%;
+  height: 2.5em;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0 auto;
+  box-shadow: 2px 2px 4px lightgrey inset;
+  background-color:  aliceblue;
+}

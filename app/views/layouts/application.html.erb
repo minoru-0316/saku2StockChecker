@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Saku2stockcheck</title>
+    <title>sakuSAkU備蓄チェック||ご自宅の防災備蓄をカンタンにチェックできるwebアプリです。</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,28 @@
   </head>
 
   <body>
+  
+    <header class="headerBox sticky-top">
+      <div class="navBox w-100 py-2 pr-3 text-right navBoxBC">
+          <div class="navList" id="nav">
+              <ul class="w-100 m-0">
+                <%= link_to 'Top', root_path ,class:"headerDropdownTitle mx-1"%>
+                <%= link_to '回答一覧を見る', answers_path ,class:"headerDropdownTitle mx-1"%>
+                <%= link_to '備蓄をチェックする', new_answer_path ,class:"headerDropdownTitle mx-1 bg-danger p-2"%>
+                <%= link_to '出典について', root_path(anchor: 'referenceInfo'), class: 'headerDropdownTitle mx-1' %>
+                <%= link_to '利用規約', root_path(anchor: 'termsOfUse'), class: 'headerDropdownTitle mx-1' %>
+                <%= link_to 'プライバシーポリシー', root_path(anchor: 'privacyPolicy'), class: 'headerDropdownTitle mx-1' %>
+                <%= link_to '運営者情報', root_path(anchor: 'aboutUs'),class:"headerDropdownTitle mx-1"%>
+              </ul> 
+          </div>
+      </div>
+    </header>
+
     <%= yield %>
+    <div class="footer sticky-bottom">
+      <div class="mt-1 text-center">
+        <p>&copy; 2019-<script>document.write(new Date().getFullYear());</script> sakuSAkU備蓄チェック運営</p>
+      </div>
+    </div>
   </body>
 </html>

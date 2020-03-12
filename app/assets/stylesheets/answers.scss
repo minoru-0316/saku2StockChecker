@@ -1,3 +1,151 @@
 // Place all the styles related to the answers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.threePointImg {
+    width: 100%
+}
+
+.answerTable {
+    text-align: center;
+}
+
+.answerCol_1 {
+    background-color:rgb(253, 244, 116);
+    font-weight: bold;
+}
+
+.answerCol_2 {
+    background-color:rgb(252, 119, 119);
+    font-weight: bold;
+}
+
+.userCol {
+    background-color:rgb(250, 245, 169);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.answerCol {
+    background-color:rgb(252, 178, 178);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+table {
+    background-color: white;
+}
+.tableHeaderBox {
+    background-color: rgb(5, 63, 57);
+}
+
+.tableHeader {
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: white
+}
+
+.showtable td {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+.answer, .required {
+    font-size: 2rem;
+}
+
+.itemName {
+    font-size: 1rem;
+    text-align: left;
+
+}
+
+.questionSentence {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.subTitle {
+    width: 90%;
+ }
+
+ .answererBox, .hitsujuhinBox, .shushokuBox, .shusaiBox {
+    margin : 3em 0 1.5em ;
+    padding : 1em 1.5em ;
+    line-height : 1.8 ;
+    border : solid 10px #333 ;
+    background-color: whitesmoke;
+ }
+
+.questionHeader {
+    font-weight: bolder;
+    background-color: rgb(248, 241, 134);
+    padding: 5px
+}
+
+.nextBtn {
+    padding: 0.5em 1em;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    color:black;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+    background-image: linear-gradient(#6795fd 0%, #67ceff 100%);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3px #5e7fca;
+}
+.nextBtn:active {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+  }
+
+  .submitBtn {
+    padding: 0.5em 1em;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    color:black;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+    background-image: linear-gradient(#6795fd 0%, #67ceff 100%);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3px #5e7fca;
+  }
+  
+  .submitBtn:active {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+  }
+
+
+  .stockItemImg {
+      width: 100px
+  }
+
+  .terms {
+    border: 1px solid #ccc;
+    font-size: 12px;
+  }
+
+  .showWeeklyText {
+    font-weight: bold;
+  }
+
+  .weeklyText {
+      color: white;
+      font-weight: bold;
+  }
+// thead, tbody {
+//     display: block;
+//   }
+//   tbody {
+//     overflow-x: hidden;
+//     overflow-y: scroll;
+//     height: 500px;
+//   }
+//   th, td {
+//     width: 100px;
+//   }
