@@ -1,5 +1,13 @@
 class Answer < ApplicationRecord
 
+  has_one :pref
+  has_one :gender
+  has_one :job
+  has_one :age
+  has_one :housing
+  has_one :stockplain
+  
+
     # Answer.allで取得するときに、レコード作成日の降順で取得
     default_scope -> { order(created_at: :desc) }
   
