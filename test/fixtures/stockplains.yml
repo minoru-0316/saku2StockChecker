@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stock_code: 1
+  stock_name: MyString
+  stock_quantity: 1
+
+two:
+  stock_code: 1
+  stock_name: MyString
+  stock_quantity: 1

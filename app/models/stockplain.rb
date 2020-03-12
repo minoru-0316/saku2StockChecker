@@ -1,0 +1,2 @@
+class Stockplain < ApplicationRecord
+end
