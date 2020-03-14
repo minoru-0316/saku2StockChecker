@@ -12,32 +12,38 @@
         <div class="container sectionBox">
             <div class="row">
                 <div class="container">
-                    <img src="/showTitle01.svg" alt="" class="mb-3">
-                    <div class="container-fluid mainTextBox mb-3">
+                    <img src="/showTitle01.svg" alt="" class="showTitle01 mb-3">
+                    <div class="thanksMessage container-fluid mainTextBox mb-3">
                           <p class="text-center my-auto mb-3">
                               <strong>
                               「sakuSAKU 備蓄チェック」のご利用ありがとうございます。<br>
                               結果はいかがでしたか？<br>
                               「想像していたよりも目安量が多くてビックリ！」された方もいらっしゃったかも知れませんね。<br>
                                 目安量は、出典元の厚生労働省の情報です。あくまで目安ですのでこちらの結果を参考にして<br>
-                                家族構成や状況に合わせた備蓄を考えるきっかけにされてはいかがでしょうか。
+                                家族構成や状況に合わせた備蓄を考えるきっかけにされてはいかがでしょうか。<br>
+                                <span class="text-danger">「印刷・保存」は、この画面の一番下をご確認ください。</span>
                               </strong>
                           </p>
                         </div>
                       </div>
                     </div>
-
+                    
                <!-- 備蓄リスト -->
-                  <div class="container">
-                      <div class="mx-auto d-block text-center">
+                  <div class="container" id="resultBox">
+                      <div class="mx-auto d-block text-center mb-3">
                         <h2 class="py-3 showWeeklyText"><span class="bg-danger p-2 weeklyText">１週間分の目安量</span> × <%= @answer.household_size %>人分（世帯人数）</h2>
                         <h3 class="py-3 showWeeklyText">回答日：<%= @answer.created_at.strftime('%Y年%m月%d日')  %></h3>
-
-                        <div>
-                          <table class="showtable mb-3" border="1" class="answerTable">
+                        <div class=" printpage">
+                        <div class="resultSaveHeader mb-1 d-none">
+                          <img src="/resultSaveHeader.svg" alt="">
+                          <h3 class="py-1 showWeeklyText">回答日：<%= @answer.created_at.strftime('%Y年%m月%d日')  %></h3>
+                        </div> 
+                          <table class="showtable" border="1" class="answerTable">
                             <thead>
                               <tr>
-                                <th colspan="4">整理番号：<%= @answer.id %></th>
+                                <th colspan="4" id="displayOnly">整理番号：<%= @answer.id %></th>
+                                <th colspan="1" class="d-none printOnly" ><%= @answer.household_size %>人分（世帯人数）　</th>
+                                <th colspan="3" class="d-none printOnly" >整理番号：<%= @answer.id %></th>
                               </tr>
                             </thead>
                             <thead class="tableHeaderBox">
@@ -50,7 +56,7 @@
                             </thead>
                               <tr>
                                 <td class="itemName"><img src="/itemIcon-001.svg" alt="飲料水の画像" class="m-1 stockItemImg pr-2"><strong>飲料水（２リットル）</strong></td>
-                                <td id="answer0"> <span class="answer"><%= @answer.bottolwater_2L %></span><small> 本</small></td>
+                                <td class="answers" id="answer0"> <span class="answer"><%= @answer.bottolwater_2L %></span><small> 本</small></td class="answers">
                                 <td id="require0"> <span class="required"><%= @answer.required_water %></span><small> 本</small></td>
                                 <td style="width:100px">
                                   <% if @answer.result_water == true %>
@@ -63,7 +69,7 @@
                   
                               <tr>
                                 <td class="itemName"><img src="/itemIcon-002.svg" alt="カセットコンロの画像" class="m-1 stockItemImg pr-2"><strong>カセットコンロ</strong></td>
-                                <td id="answer1"> <span class="answer"><%= @answer.cooking_stove %></span><small> 台</small></td>
+                                <td class="answers" id="answer1"> <span class="answer"><%= @answer.cooking_stove %></span><small> 台</small></td>
                                 <td id="require1"> <span class="required"><%= @answer.required_stove %></span><small> 台</small></td>
                                 <td style="width:100px">
                                   <% if @answer.result_stove == true %>
@@ -76,7 +82,7 @@
                               
                               <tr>
                                 <td class="itemName"><img src="/itemIcon-003.svg" alt="カセットボンベの画像" class="m-1 stockItemImg pr-2"><strong>カセットボンベ</strong></td>
-                                <td id="answer2"> <span class="answer"><%= @answer.cassette_gas %></span><small> 本</small></td>
+                                <td class="answers" id="answer2"> <span class="answer"><%= @answer.cassette_gas %></span><small> 本</small></td class="answers">
                                 <td id="require2"> <span class="required"><%= @answer.required_gas %></span><small> 本</small></td>
                                 <td style="width:100px">
                                   <% if @answer.result_gas == true %>
@@ -89,7 +95,7 @@
                   
                               <tr>
                                 <td class="itemName"><img src="/itemIcon-004.svg" alt="白米の画像" class="m-1 stockItemImg pr-2"><strong>白米（１袋=2kg）</strong></td>
-                                <td id="answer3"> <span class="answer"><%= @answer.rice_2kg %></span><small> kg</small></td>
+                                <td class="answers" id="answer3"> <span class="answer"><%= @answer.rice_2kg %></span><small> kg</small></td class="answers">
                                 <td id="require3"> <span class="required"><%= @answer.required_rice %></span><small> kg</small></td>
                                 <td style="width:100px">
                                   <% if @answer.result_rice == true %>
@@ -102,7 +108,7 @@
                   
                               <tr>
                                 <td class="itemName"><img src="/itemIcon-005.svg" alt="乾麺の画像" class="m-1 stockItemImg pr-2"><strong>乾麺（1袋 = 300g）</strong></td>
-                                <td id="answer4"> <span class="answer"><%= @answer.dried_noodle %></span><small> 袋</small></td>
+                                <td class="answers" id="answer4"> <span class="answer"><%= @answer.dried_noodle %></span><small> 袋</small></td class="answers">
                                 <td id="require4"> <span class="required"><%= @answer.required_noodle %></span><small> 袋</small></td>
                                 <td style="width:100px">
                                   <% if @answer.result_noodle == true %>
@@ -115,7 +121,7 @@
                   
                               <tr>
                                 <td class="itemName"><img src="/itemIcon-006.svg" alt="パスタ麺の画像" class="m-1 stockItemImg pr-2"><strong>パスタ乾麺(1袋=600g)</strong></td>
-                                <td id="answer5"> <span class="answer"><%= @answer.dried_pasta %></span><small> 袋</small></td>
+                                <td class="answers" id="answer5"> <span class="answer"><%= @answer.dried_pasta %></span><small> 袋</small></td class="answers">
                                 <td id="require5"> <span class="required"><%= @answer.required_pasta %></span><small> 袋</small></td>
                                 <td style="width:100px">
                                   <% if @answer.result_pasta == true %>
@@ -128,7 +134,7 @@
                   
                               <tr>
                                 <td class="itemName"><img src="/itemIcon-007.svg" alt="カップ麺の画像" class="m-1 stockItemImg pr-2"><strong>カップ麺</strong></td>
-                                <td id="answer6"> <span class="answer"><%= @answer.cupped_noodle %></span><small> 個</small></td>
+                                <td class="answers" id="answer6"> <span class="answer"><%= @answer.cupped_noodle %></span><small> 個</small></td class="answers">
                                 <td id="require6"> <span class="required"><%= @answer.required_cpnoodle %></span><small> 個</small></td>
                                 <td style="width:100px">
                                   <% if @answer.result_cpnoodle == true %>
@@ -141,7 +147,7 @@
                   
                               <tr>
                                 <td class="itemName"><img src="/itemIcon-008.svg" alt="パックごはんの画像" class="m-1 stockItemImg pr-2"><strong>パックご飯</strong></td>
-                                <td id="answer7"> <span class="answer"><%= @answer.packed_rice %></span><small> 個</small></td>
+                                <td class="answers" id="answer7"> <span class="answer"><%= @answer.packed_rice %></span><small> 個</small></td class="answers">
                                 <td id="require7"> <span class="required"><%= @answer.required_pkrice %></span><small> 個</small></td>
                                 <td style="width:100px">
                                   <% if @answer.result_pkrice == true %>
@@ -154,7 +160,7 @@
                   
                               <tr>
                                 <td class="itemName"><img src="/itemIcon-009.svg" alt="シリアルの画像" class="m-1 stockItemImg pr-2"><strong>その他・シリアルなど</strong></td>
-                                <td id="answer8"> <span class="answer"><%= @answer.cereal_etc %></span><small> 個</small></td>
+                                <td class="answers" id="answer8"> <span class="answer"><%= @answer.cereal_etc %></span><small> 個</small></td class="answers">
                                 <td id="require8"> <span class="required"><%= @answer.required_etc %></span><small> 個</small></td>
                                 <td style="width:100px">
                                   <% if @answer.result_etc == true %>
@@ -167,7 +173,7 @@
                   
                               <tr>
                                 <td class="itemName"><img src="/itemIcon-010.svg" alt="レトルト食品１の画像" class="m-1 stockItemImg pr-2"><strong>レトルト食品-1</strong></td>
-                                <td id="answer9"> <span class="answer"><%= @answer.retort_food1 %></span><small> 個</small></td>
+                                <td class="answers" id="answer9"> <span class="answer"><%= @answer.retort_food1 %></span><small> 個</small></td class="answers">
                                 <td id="require9"> <span class="required"><%= @answer.required_retort_1 %></span><small> 個</small></td>
                                 <td style="width:100px">
                                   <% if @answer.result_retort_1 == true %>
@@ -180,7 +186,7 @@
                   
                               <tr>
                                 <td class="itemName"><img src="/itemIcon-011.svg" alt="レトルト食品２の画像" class="m-1 stockItemImg pr-2"><strong>レトルト食品-2</strong></td>
-                                <td id="answer10"> <span class="answer"><%= @answer.retort_food2 %></span><small> 個</small></td>
+                                <td class="answers" id="answer10"> <span class="answer"><%= @answer.retort_food2 %></span><small> 個</small></td class="answers">
                                 <td id="require10">  <span class="required"><%= @answer.required_retort_2 %></span><small> 個</small></td>
                                 <td style="width:100px">
                                   <% if @answer.result_retort_2 == true %>
@@ -193,7 +199,7 @@
                   
                               <tr>
                                 <td class="itemName"><img src="/itemIcon-012.svg" alt="缶詰の画像" class="m-1 stockItemImg pr-2"><strong>缶詰（肉・魚）</strong></td>
-                                <td id="answer11"> <span class="answer"><%= @answer.canned_food %></span><small> 個</small></td>
+                                <td class="answers" id="answer11"> <span class="answer"><%= @answer.canned_food %></span><small> 個</small></td class="answers">
                                 <td id="require11"> <span class="required"><%= @answer.required_canned %></span><small> 個</small></td>
                                 <td style="width:100px">
                                   <% if @answer.result_canned == true %>
@@ -207,11 +213,80 @@
                         </div>
                       </div>
                   </div>
+
                 </div>
             </div>
         </div>
       </section>
+      
+      <section class="sect_2 mt-5" id="box2">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="actions text-center saveBox">
+            <h1>＜パソコン＞</h1>
+              <div class="print-btn btn-square-shadow">結果を "印刷" または "保存"する
+            </div>
+          </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="actions text-center saveBox">
+              <h1>＜スマートフォンなど＞</h1>
+              <p class="text-center">
+              「ホーム画面に追加」などで<br>
+              この画面のショートカットをホーム画面に作成すると便利です。
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
     </article>
 </main>
 
 
+<script>
+window.onbeforeunload = function(event){
+  event = event || window.event; 
+  event.returnValue = 'ページから移動しますか？';
+}
+</script>
+
+
+<script>
+$(function(){
+    //個別印刷ボタンをクリックした時
+   $('.print-btn').on('click', function(){
+
+     var resultSaveHeader =  document.getElementsByClassName("resultSaveHeader");
+
+     var displayOnly = document.getElementById("displayOnly");
+    $(displayOnly).addClass('d-none');
+     var printOnly = document.getElementsByClassName("printOnly");
+    $(printOnly).removeClass('d-none');
+
+     //プリントしたいエリアの取得
+     var printPage = document.getElementsByClassName("printpage");
+     console.log(printPage)
+ 
+    //プリント用の要素「#print」を作成
+       $('body').append('<div id="print" class="printBc"></div>');
+       $(printPage).clone().appendTo('#print');
+       $(resultSaveHeader).removeClass('d-none');
+
+    //「#print」以外の要素に非表示用のclass「print-off」を指定
+        $('body > :not(#print)').addClass('print-off');
+
+      window.print();
+ 
+    //  //window.print()の実行後、作成した「#print」と、非表示用のclass「print-off」を削除
+     $('#print').remove();
+
+       $(resultSaveHeader).addClass('d-none');
+     $('.print-off').removeClass('print-off');
+     $(printOnly).addClass('d-none');
+    $(displayOnly).removeClass('d-none');
+
+   });
+   });
+</script>
