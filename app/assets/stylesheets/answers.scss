@@ -162,18 +162,22 @@ table {
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
     border-bottom: none;
   }
-// thead, tbody {
-//     display: block;
-//   }
-//   tbody {
-//     overflow-x: hidden;
-//     overflow-y: scroll;
-//     height: 500px;
-//   }
-//   th, td {
-//     width: 100px;
-//   }
 
+// thの固定
+  .answerIndexTable thead {
+    display: block;
+  }
+  
+  .answerIndexTable tbody {
+    display: block;
+    overflow-y: scroll;
+    height: 250px;
+  }
+  .answerIndexTable th, .answerIndexTable td {
+        min-width: 70px;
+  }
+
+  
 .resultSaveHeader {
     box-shadow: 0px 0px 6px 3px #215c2c;
 }
@@ -195,3 +199,5 @@ table {
     padding: 10px 0px
 
 }
+
+
