@@ -63,3 +63,5 @@ group :production do
 end
 
 gem 'google-analytics-rails'
+
+gem 'meta-tags'
