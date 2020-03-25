@@ -1,0 +1,287 @@
+<% set_meta_tags title: 'sakuSAKU備蓄チェック||備蓄の更新ページ', description: '万一の非常時用にご家庭の防災備蓄をお手軽にチェックできる便利な「sakuSAKU備蓄チェック」。ご自分の備蓄情報の更新はこちらのページでできます。' %>
+
+<div class="headerImgBox" id="headerImg">
+    <div class="headerImg">
+        <img src="/newHeaderImg-03.svg" alt="新規アンケート回答ページのヘッダー画像" class="answersNewHeaderImg">
+    </div>
+</div>
+
+<main class="mainBox">
+    
+<!-- article -1 -->
+    <article class="art_1 mx-auto" id="art_1Box">
+        <section class="sect_2 mt-5 d-none" id="box2">
+            <div class="container sectionBox">
+                <div class="row">
+                    <div class="container">
+                        <img src="/newSubtitle-02.svg" alt="" class="mb-3">
+                        <div class="container-fluid">
+                        <h4 class="text-center text-danger">※氏名、メールアドレスなどの個人を特定する情報は含まれません。</h4>
+
+                        <%= form_for(@answer) do |f| %>
+                </div>
+            </div>
+        </section>
+    </article>
+    
+
+<!-- article -2 -->
+    <article class="art_2 mx-auto" id="art_2Box">
+        <section class="sect_1 mt-5 d-none" id="box3">
+            <div class="container sectionBox">
+                <div class="row">
+                    <div class="container">
+                        <img src="/newSubtitle-03.svg" alt="" class="mb-3">
+                        <div class="container-fluid">
+                            <h4 class="text-center">各アイテムのご自宅にストックしている数量を入力してください。</h4>
+                            <p class="text-center">※備蓄が無い場合は、0 "ゼロ"を入力してください。</p class="text-center">
+                            <div class="container enqueteBox" id="enqueteBox1">
+                                <div class="hitsujuhinBox" id="category1">
+                                <img src="/subTitle-01.svg" alt="" class=" mx-auto d-block subTitle">
+                                <hr>
+                                    <div class="row questionSentence mb-1" id="question1">
+                                        <!-- <div class="col-2 text-right">No.1</div> -->
+                                        <div class="col-6 text-center">飲料水（2リットル）<span class="small">※単位：本</span></div>
+                                        <div class="col-6 field">
+                                            <%= f.number_field :bottolwater_2L, :step => 1, min: 0, class: "answerFiled text-right", id: "answer1" %> 本
+                                        </div>
+                                        
+                                        <div class="col-2 field requiredNum">
+                                            <% f.text_field :required_water, class: "requiredField", id: "required1" %> 
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row questionSentence mb-1" id="question2">
+                                        <!-- <div class="col-2 text-right">No.2</div> -->
+                                        <div class="col-6 text-center">カセットコンロ<span class="small"> ※単位：台</span></div>
+                                        <div class="col-6 field">
+                                            <%= f.number_field :cooking_stove, :step => 1, min: 0, class: "answerFiled text-right", id: "answer2" %> 台
+                                        </div>
+                                        <div class="col-2 field requiredNum d-none ">
+                                            <% f.text_field :required_stove, class: "requiredField", id: "required2" %> 
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row questionSentence mb-1" id="question3">
+                                        <!-- <div class="col-2 text-right">No.3</div> -->
+                                        <div class="col-6 text-center">カセットボンベ<span class="small"> ※単位：本</span></div>
+                                        <div class="col-6 field">
+                                            <%= f.number_field :cassette_gas, :step => 1, min: 0, class: "answerFiled text-right", id: "answer3" %> 本
+                                        </div>
+                                        <div class="col-2 field requiredNum d-none ">
+                                            <% f.text_field :required_gas, class: "requiredField", id: "required3" %> 
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="shushokuBox" id="category2">
+                                <img src="/subTitle-02.svg" alt="" class=" mx-auto d-block subTitle">
+                                <hr>
+                                    <div class="row questionSentence mb-1" id="question4">
+                                        <!-- <div class="col-2 text-right">No.4</div> -->
+                                        <div class="col-6 text-center">白米（１袋=2kg）<span class="small">※単位：kg</span>
+                                            <p class="container small">※お米の現在量（kg）を記入ください</p>
+                                        </div>
+                                        <div class="col-6 field">
+                                            <%= f.number_field :rice_2kg, :step => 1, min: 0, class: "answerFiled text-right", id: "answer4" %> kg
+                                        </div>
+                                        <hr>
+                                        <div class="col-2 field requiredNum d-none ">
+                                            <% f.text_field :required_rice, class: "requiredField", id: "required4" %> 
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row questionSentence mb-1" id="question5">
+                                        <!-- <div class="col-2 text-right">No.5</div> -->
+                                        <div class="col-6 text-center">乾麺（1袋 = 300g）<span class="small">※単位：袋</span>
+                                        <p class="container small">※うどん・そば・そうめんなど</p>
+                                        </div>
+                                        <div class="col-6 field">
+                                            <%= f.number_field :dried_noodle, :step => 1, min: 0, class: "answerFiled text-right", id: "answer5" %> 袋
+                                        </div>
+                                        
+                                        <div class="col-2 field requiredNum d-none ">
+                                            <% f.text_field :required_noodle, class: "requiredField", id: "required5" %> 
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row questionSentence mb-1" id="question6">
+                                        <!-- <div class="col-2 text-right">No.6</div> -->
+                                        <div class="col-6 text-center">パスタ乾麺(1袋=600g)<span class="small"> ※単位：袋</span></div>
+                                        <div class="col-6 field">
+                                            <%= f.number_field :dried_pasta, :step => 1, min: 0, class: "answerFiled text-right", id: "answer6" %> 袋
+                                        </div>
+                                        
+                                        <div class="col-2 field requiredNum d-none ">
+                                            <% f.text_field :required_pasta, class: "requiredField", id: "required6" %> 
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row questionSentence mb-1" id="question7">
+                                        <!-- <div class="col-2 text-right">No.7</div> -->
+                                        <div class="col-6 text-center">カップ麺<span class="small"> ※単位：個</span></div>
+                                        <div class="col-6 field">
+                                            <%= f.number_field :cupped_noodle, :step => 1, min: 0, class: "answerFiled text-right", id: "answer7" %> 個
+                                        </div>
+                                        
+                                        <div class="col-2 field requiredNum d-none ">
+                                            <% f.text_field :required_cpnoodle, class: "requiredField", id: "required7" %>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row questionSentence mb-1" id="question8">
+                                        <!-- <div class="col-2 text-right">No.8</div> -->
+                                        <div class="col-6 text-center">パックご飯<span class="small"> ※単位：個</span></div>
+                                        <div class="col-6 field">
+                                            <%= f.number_field :packed_rice, :step => 1, min: 0, class: "answerFiled text-right", id: "answer8" %> 個
+                                        </div>
+                                        
+                                        <div class="col-2 field requiredNum d-none ">
+                                            <% f.text_field :required_pkrice, class: "requiredField", id: "required8" %> 
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row questionSentence mb-1" id="question9">
+                                        <!-- <div class="col-2 text-right">No.9</div> -->
+                                        <div class="col-6 text-center">その他・シリアルなど<span class="small"> ※単位：個</span></div>
+                                        <div class="col-6 field">
+                                            <%= f.number_field :cereal_etc, :step => 1, min: 0, class: "answerFiled text-right", id: "answer9" %> 個
+                                        </div>
+                                        
+                                        <div class="col-2 field requiredNum d-none ">
+                                            <% f.text_field :required_etc, class: "requiredField", id: "required9" %> 
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="shusaiBox" id="category3">
+                                <img src="/subTitle-03.svg" alt="" class=" mx-auto d-block subTitle">
+                                <hr>
+                                    <div class="row questionSentence mb-1" id="question10">
+                                        <!-- <div class="col-2 text-right">No.10</div> -->
+                                        <div class="col-6 text-center">レトルト食品-1<span class="small"> ※単位：個</span>
+                                            <p class="container small">※牛丼の素やレトルトカレーなど</p></div>
+                                        <div class="col-6 field">
+                                            <%= f.number_field :retort_food1, :step => 1, min: 0, class: "answerFiled text-right", id: "answer10" %> 個
+                                        </div>
+                                        <div class="col-2 field requiredNum d-none ">
+                                            <% f.text_field :required_retort_1, class: "requiredField", id: "required10" %> 
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row questionSentence mb-1" id="question11">
+                                        <!-- <div class="col-2 text-right">No.11</div> -->
+                                        <div class="col-6 text-center">レトルト食品-2<span class="small"> ※単位：個</span>
+                                            <p class="container small">※パスタソースなど</p></div>
+                                        <div class="col-6 field">
+                                            <%= f.number_field :retort_food2, :step => 1, min: 0, class: "answerFiled text-right", id: "answer11" %> 個
+                                        </div>
+                                        
+                                        <div class="col-2 field requiredNum d-none ">
+                                            <% f.text_field :required_retort_2, class: "requiredField", id: "required11" %> 
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row questionSentence mb-1" id="question12">
+                                        <!-- <div class="col-2 text-right">No.12</div> -->
+                                        <div class="col-6 text-center">缶詰（肉・魚）<span class="small">※単位：個</span></div>
+                                        <div class="col-6 field">
+                                            <%= f.number_field :canned_food, :step => 1, min: 0, class: "answerFiled text-right", id: "answer12" %> 個
+                                        </div>
+                                        
+                                        <div class="col-2 field requiredNum d-none ">
+                                            <% f.text_field :required_canned, class: "requiredField", id: "required12" %> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sect_2 mt-5" id="box3">
+            <div class="container sectionBox">
+                <div class="row">
+                    <div class="container">
+                        <img src="/editSubtitle-04.svg" alt="" class="mb-3">
+                        <div class="container-fluid">
+                            <h4 class="text-center">「備蓄チェック」に記載以外のアイテムで、ご自宅に必要な備蓄品を登録できます。</h4>
+                            <p class="text-center">※こちらに入力した内容は、回答一覧のリストには表示されません。<br>
+                            ※こちらに入力した内容は運営の方で集計し統計的な情報として、回答一覧とは別に公開させていただく場合があります。<br>
+                            予めご了承ください。</p class="text-center">
+                            <h5 class="text-center text-light bg-dark py-2">メールアドレス、電話番号、氏名、住所など個人等を特定される情報は入力しないでください。</h5>
+
+                            <div class="container enqueteBox" id="enqueteBox1">
+                                <div class="hitsujuhinBox" id="category1">
+                                <img src="/subTitle-04.svg" alt="" class=" mx-auto d-block subTitle">
+                                <hr>
+                                    <table border="1" class="mx-auto" width="90%">
+                                        <thead>
+                                            <tr>
+                                            <th class="userItemCol_1 text-center">アイテム名/15文字まで</th>
+                                            <th class="userItemCol_1 text-center">想定日数</th>
+                                            <th class="userItemCol_1 text-center">必要数</th>
+                                            <th class="userItemCol_1 text-center">メモ/50文字まで</th>
+                                            </tr>
+                                        </thead>
+                                        <tr>
+                                            <td class="p-1"><%= f.text_field :user_item_1, class: "", size: 18, maxlength: 15 %> </td>
+                                            <td class="p-1"><%= f.number_field :user_requied_num_1, class: "text-right", :step => 1, min: 0, value:0 %>日分 </td>
+                                            <td class="p-1"><%= f.number_field :user_result_num_1, class: "text-right", :step => 1, min: 0, value:0 %>個 </td>
+                                            <td class="p-1"><%= f.text_field :user_memo_1, class: "", size: 45, maxlength: 50 %> </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-1"><%= f.text_field :user_item_2, class: "hoge", size: 18, maxlength: 15 %> </td>
+                                            <td class="p-1"><%= f.number_field :user_requied_num_2, class: "text-right", :step => 1, min: 0, value:0 %>日分 </td>
+                                            <td class="p-1"><%= f.number_field :user_result_num_2, class: "text-right", :step => 1, min: 0, value:0 %>個 </td>
+                                            <td class="p-1"><%= f.text_field :user_memo_2, class: "hoge", size: 45, maxlength: 50 %> </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-1"><%= f.text_field :user_item_3, class: "hoge", size: 18, maxlength: 15 %> </td>
+                                            <td class="p-1"><%= f.number_field :user_requied_num_3, class: "text-right", :step => 1, min: 0, value:0 %>日分 </td>
+                                            <td class="p-1"><%= f.number_field :user_result_num_3, class: "text-right", :step => 1, min: 0, value:0 %>個 </td>
+                                            <td class="p-1"><%= f.text_field :user_memo_3, class: "hoge", size: 45, maxlength: 50 %> </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-1"><%= f.text_field :user_item_4, class: "hoge", size: 18, maxlength: 15 %> </td>
+                                            <td class="p-1"><%= f.number_field :user_requied_num_4, class: "text-right", :step => 1, min: 0, value:0 %>日分 </td>
+                                            <td class="p-1"><%= f.number_field :user_result_num_4, class: "text-right", :step => 1, min: 0, value:0 %>個 </td>
+                                            <td class="p-1"><%= f.text_field :user_memo_4, class: "hoge", size: 45, maxlength: 50 %> </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-1"><%= f.text_field :user_item_5, class: "hoge", size: 18, maxlength: 15 %> </td>
+                                            <td class="p-1"><%= f.number_field :user_requied_num_5, class: "text-right", :step => 1, min: 0, value:0 %>日分 </td>
+                                            <td class="p-1"><%= f.number_field :user_result_num_5, class: "text-right", :step => 1, min: 0, value:0 %>個 </td>
+                                            <td class="p-1"><%= f.text_field :user_memo_5, class: "hoge", size: 45, maxlength: 50 %> </td>
+                                        </tr>
+                                    </table>
+
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container m-3 mx-auto mainTextBox bg-light">
+        <h5 class="text-center">入力した内容で間違いなければ、追加ボタンを押してください。<br>
+        <span class="text-center">↓↓↓</span></h5>
+            <div class="actions text-center">
+                <%= f.submit '追加ボタン', :class=>"update-btn updateBtn-square-shadow" %>
+            </div>
+            <% end %>
+        </div>
+    </article>
+
+</main>
+
+
+
+
+
+
+

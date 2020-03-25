@@ -163,6 +163,77 @@ table {
     border-bottom: none;
   }
 
+  .updateBtn-square-shadow {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #16991c;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 4px #75b683;
+    border-radius: 3px;
+  }
+  .updateBtn-square-shadow:active {
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+    border-bottom: none;
+  }
+
+  .updateBtn-square-shadow {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #16991c;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 4px #75b683;
+    border-radius: 3px;
+  }
+  .updateBtn-square-shadow:active {
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+    border-bottom: none;
+  }
+
+  .forstockBtn-square-shadow {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #f7e70e;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 4px #d8d08b;
+    border-radius: 3px;
+  }
+  .forstockBtn-square-shadow:active {
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+    border-bottom: none;
+  }
+
+  .BtnTexts {
+      font-size: 1.4rem;
+      font-weight: bolder;
+      color: white;
+  }
+  .forstockBtnTexts {
+    font-size: 1.4rem;
+    font-weight: bolder;
+    color: black;
+}
+
+  .topContent {
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem;
+    background: linear-gradient(transparent 60%, rgb(252, 116, 116) 0%);
+  }
+  
+
+
 // thの固定
   .answerIndexTable thead {
     display: block;
@@ -200,4 +271,30 @@ table {
 
 }
 
+textarea {
+  width: 90%;
+  resize: none;
+  font-size: 29pt;
+  line-height: 45px;
 
+  /* テキストエリアに陰をつける */
+  box-shadow: 0.2em 0.2em 0.5em black;
+
+  background-image:
+  repeating-linear-gradient(
+    #fff,
+    #fff calc(1.5rem - 1px),
+    #ced4da calc(1.5rem - 1px),
+    #ced4da 1.5rem,
+    #fff 1.5rem
+  );
+  background-origin: content-box;
+  background-clip: content-box;
+  background-attachment: local;
+  /* 淡いグレーで枠線を囲む */
+  border: 1px solid #ccc;
+}
+
+.editTable {
+  width:90%
+}

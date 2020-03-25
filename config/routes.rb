@@ -16,5 +16,6 @@ Rails.application.routes.draw do
 
   resources :tops
 
+  resources :forstocks
   
 end

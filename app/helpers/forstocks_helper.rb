@@ -1,0 +1,2 @@
+module ForstocksHelper
+end
