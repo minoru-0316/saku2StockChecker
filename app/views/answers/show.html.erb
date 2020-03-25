@@ -1,6 +1,6 @@
 <div class="headerImgBox" id="headerImg">
     <div class="headerImg">
-        <img src="/showHeaderImg-04.svg" alt="新規アンケート回答ページのヘッダー画像" class="answersNewHeaderImg">
+        <img src="/showHeaderImg-04.svg" alt="sakuSAKU備蓄チェックー「新規アンケート回答」ページのヘッダー画像" class="answersNewHeaderImg">
     </div>
 </div>
 
@@ -12,7 +12,7 @@
         <div class="container sectionBox">
             <div class="row">
                 <div class="container">
-                    <img src="/showTitle01.svg" alt="" class="showTitle01 mb-3">
+                    <img src="/showTitle01.svg" alt="sakuSAKU備蓄チェックー「結果発表」バナー画像" class="showTitle01 mb-3">
                     <div class="thanksMessage container-fluid mainTextBox mb-3">
                           <p class="text-center my-auto mb-3">
                               <strong>
@@ -54,7 +54,7 @@
                         <h3 class="py-3 showWeeklyText">回答日：<%= @answer.created_at.strftime('%Y年%m月%d日')  %></h3>
                         <div class="printpage">
                           <div class="resultSaveHeader mb-1 d-none">
-                            <img src="/resultSaveHeader.svg" alt="">
+                            <img src="/resultSaveHeader.svg" alt="sakuSAKU備蓄チェックー">
                             <h3 class="py-1 showWeeklyText">回答日：<%= @answer.created_at.strftime('%Y年%m月%d日')  %></h3>
                           </div> 
                             <table class="showtable answerTable" border="1">
@@ -74,164 +74,164 @@
                                   </tr>
                               </thead>
                                 <tr>
-                                  <td class="itemName"><img src="/itemIcon-001.svg" alt="飲料水の画像" class="m-1 stockItemImg pr-2"><strong>飲料水（２リットル）</strong></td>
+                                  <td class="itemName"><img src="/itemIcon-001.svg" alt="sakuSAKU備蓄チェックー飲料水の画像" class="m-1 stockItemImg pr-2"><strong>飲料水（２リットル）</strong></td>
                                   <td class="answers" id="answer0"> <span class="answer"><%= @answer.bottolwater_2L %></span><small> 本</small></td class="answers">
                                   <td id="require0"> <span class="required"><%= @answer.required_water %></span><small> 本</small></td>
                                   <td style="width:100px">
                                     <% if @answer.result_water == true %>
-                                      <img src="/stocktrueimg.svg" alt="判定がfalseの画像" class="m-1 stockFalseImg0">
+                                      <img src="/stocktrueimg.svg" alt="判定がtrueの画像" class="m-1 stockFalseImg0">
                                     <% elsif @answer.result_water == false %>
-                                      <img src="/stockfalseimg.svg" alt="判定がtrueの画像" class="m-1 stockTrueImg0">
+                                      <img src="/stockfalseimg.svg" alt="判定がfalseの画像" class="m-1 stockTrueImg0">
                                     <% end %>
                                   </td>
                                 </tr>
                     
                                 <tr>
-                                  <td class="itemName"><img src="/itemIcon-002.svg" alt="カセットコンロの画像" class="m-1 stockItemImg pr-2"><strong>カセットコンロ</strong></td>
+                                  <td class="itemName"><img src="/itemIcon-002.svg" alt="sakuSAKU備蓄チェックーカセットコンロの画像" class="m-1 stockItemImg pr-2"><strong>カセットコンロ</strong></td>
                                   <td class="answers" id="answer1"> <span class="answer"><%= @answer.cooking_stove %></span><small> 台</small></td>
                                   <td id="require1"> <span class="required"><%= @answer.required_stove %></span><small> 台</small></td>
                                   <td style="width:100px">
                                     <% if @answer.result_stove == true %>
-                                      <img src="/stocktrueimg.svg" alt="判定がfalseの画像" class="m-1 stockFalseImg0">
+                                      <img src="/stocktrueimg.svg" alt="判定がtrueの画像" class="m-1 stockFalseImg0">
                                     <% elsif @answer.result_stove == false %>
-                                      <img src="/stockfalseimg.svg" alt="判定がtrueの画像" class="m-1 stockTrueImg0">
+                                      <img src="/stockfalseimg.svg" alt="判定がfalseの画像" class="m-1 stockTrueImg0">
                                     <% end %>
                                   </td>
                                 </tr>
                                 
                                 <tr>
-                                  <td class="itemName"><img src="/itemIcon-003.svg" alt="カセットボンベの画像" class="m-1 stockItemImg pr-2"><strong>カセットボンベ</strong></td>
+                                  <td class="itemName"><img src="/itemIcon-003.svg" alt="sakuSAKU備蓄チェックーカセットボンベの画像" class="m-1 stockItemImg pr-2"><strong>カセットボンベ</strong></td>
                                   <td class="answers" id="answer2"> <span class="answer"><%= @answer.cassette_gas %></span><small> 本</small></td class="answers">
                                   <td id="require2"> <span class="required"><%= @answer.required_gas %></span><small> 本</small></td>
                                   <td style="width:100px">
                                     <% if @answer.result_gas == true %>
-                                      <img src="/stocktrueimg.svg" alt="判定がfalseの画像" class="m-1 stockFalseImg0">
+                                      <img src="/stocktrueimg.svg" alt="判定がtrueの画像" class="m-1 stockFalseImg0">
                                     <% elsif @answer.result_gas == false %>
-                                      <img src="/stockfalseimg.svg" alt="判定がtrueの画像" class="m-1 stockTrueImg0">
+                                      <img src="/stockfalseimg.svg" alt="判定がfalseの画像" class="m-1 stockTrueImg0">
                                     <% end %>
                                   </td>
                                 </tr>
                     
                                 <tr>
-                                  <td class="itemName"><img src="/itemIcon-004.svg" alt="白米の画像" class="m-1 stockItemImg pr-2"><strong>白米（１袋=2kg）</strong></td>
+                                  <td class="itemName"><img src="/itemIcon-004.svg" alt="sakuSAKU備蓄チェックー白米の画像" class="m-1 stockItemImg pr-2"><strong>白米（１袋=2kg）</strong></td>
                                   <td class="answers" id="answer3"> <span class="answer"><%= @answer.rice_2kg %></span><small> kg</small></td class="answers">
                                   <td id="require3"> <span class="required"><%= @answer.required_rice %></span><small> kg</small></td>
                                   <td style="width:100px">
                                     <% if @answer.result_rice == true %>
-                                      <img src="/stocktrueimg.svg" alt="判定がfalseの画像" class="m-1 stockFalseImg0">
+                                      <img src="/stocktrueimg.svg" alt="判定がtrueの画像" class="m-1 stockFalseImg0">
                                     <% elsif @answer.result_rice == false %>
-                                      <img src="/stockfalseimg.svg" alt="判定がtrueの画像" class="m-1 stockTrueImg0">
+                                      <img src="/stockfalseimg.svg" alt="判定がfalseの画像" class="m-1 stockTrueImg0">
                                     <% end %>
                                   </td>
                                 </tr>
                     
                                 <tr>
-                                  <td class="itemName"><img src="/itemIcon-005.svg" alt="乾麺の画像" class="m-1 stockItemImg pr-2"><strong>乾麺（1袋 = 300g）</strong></td>
+                                  <td class="itemName"><img src="/itemIcon-005.svg" alt="sakuSAKU備蓄チェックー乾麺の画像" class="m-1 stockItemImg pr-2"><strong>乾麺（1袋 = 300g）</strong></td>
                                   <td class="answers" id="answer4"> <span class="answer"><%= @answer.dried_noodle %></span><small> 袋</small></td class="answers">
                                   <td id="require4"> <span class="required"><%= @answer.required_noodle %></span><small> 袋</small></td>
                                   <td style="width:100px">
                                     <% if @answer.result_noodle == true %>
-                                      <img src="/stocktrueimg.svg" alt="判定がfalseの画像" class="m-1 stockFalseImg0">
+                                      <img src="/stocktrueimg.svg" alt="判定がtrueの画像" class="m-1 stockFalseImg0">
                                     <% elsif @answer.result_noodle == false %>
-                                      <img src="/stockfalseimg.svg" alt="判定がtrueの画像" class="m-1 stockTrueImg0">
+                                      <img src="/stockfalseimg.svg" alt="判定がfalseの画像" class="m-1 stockTrueImg0">
                                     <% end %>
                                   </td>
                                 </tr>
                     
                                 <tr>
-                                  <td class="itemName"><img src="/itemIcon-006.svg" alt="パスタ麺の画像" class="m-1 stockItemImg pr-2"><strong>パスタ乾麺(1袋=600g)</strong></td>
+                                  <td class="itemName"><img src="/itemIcon-006.svg" alt="sakuSAKU備蓄チェックーパスタ麺の画像" class="m-1 stockItemImg pr-2"><strong>パスタ乾麺(1袋=600g)</strong></td>
                                   <td class="answers" id="answer5"> <span class="answer"><%= @answer.dried_pasta %></span><small> 袋</small></td class="answers">
                                   <td id="require5"> <span class="required"><%= @answer.required_pasta %></span><small> 袋</small></td>
                                   <td style="width:100px">
                                     <% if @answer.result_pasta == true %>
-                                      <img src="/stocktrueimg.svg" alt="判定がfalseの画像" class="m-1 stockFalseImg0">
+                                      <img src="/stocktrueimg.svg" alt="判定がtrueの画像" class="m-1 stockFalseImg0">
                                     <% elsif @answer.result_pasta == false %>
-                                      <img src="/stockfalseimg.svg" alt="判定がtrueの画像" class="m-1 stockTrueImg0">
+                                      <img src="/stockfalseimg.svg" alt="判定がfalseの画像" class="m-1 stockTrueImg0">
                                     <% end %>
                                   </td>
                                 </tr>
                     
                                 <tr>
-                                  <td class="itemName"><img src="/itemIcon-007.svg" alt="カップ麺の画像" class="m-1 stockItemImg pr-2"><strong>カップ麺</strong></td>
+                                  <td class="itemName"><img src="/itemIcon-007.svg" alt="sakuSAKU備蓄チェックーカップ麺の画像" class="m-1 stockItemImg pr-2"><strong>カップ麺</strong></td>
                                   <td class="answers" id="answer6"> <span class="answer"><%= @answer.cupped_noodle %></span><small> 個</small></td class="answers">
                                   <td id="require6"> <span class="required"><%= @answer.required_cpnoodle %></span><small> 個</small></td>
                                   <td style="width:100px">
                                     <% if @answer.result_cpnoodle == true %>
-                                      <img src="/stocktrueimg.svg" alt="判定がfalseの画像" class="m-1 stockFalseImg0">
+                                      <img src="/stocktrueimg.svg" alt="判定がtrueの画像" class="m-1 stockFalseImg0">
                                     <% elsif @answer.result_cpnoodle == false %>
-                                      <img src="/stockfalseimg.svg" alt="判定がtrueの画像" class="m-1 stockTrueImg0">
+                                      <img src="/stockfalseimg.svg" alt="判定がfalseの画像" class="m-1 stockTrueImg0">
                                     <% end %>
                                   </td>
                                 </tr>
                     
                                 <tr>
-                                  <td class="itemName"><img src="/itemIcon-008.svg" alt="パックごはんの画像" class="m-1 stockItemImg pr-2"><strong>パックご飯</strong></td>
+                                  <td class="itemName"><img src="/itemIcon-008.svg" alt="sakuSAKU備蓄チェックーパックごはんの画像" class="m-1 stockItemImg pr-2"><strong>パックご飯</strong></td>
                                   <td class="answers" id="answer7"> <span class="answer"><%= @answer.packed_rice %></span><small> 個</small></td class="answers">
                                   <td id="require7"> <span class="required"><%= @answer.required_pkrice %></span><small> 個</small></td>
                                   <td style="width:100px">
                                     <% if @answer.result_pkrice == true %>
-                                      <img src="/stocktrueimg.svg" alt="判定がfalseの画像" class="m-1 stockFalseImg0">
+                                      <img src="/stocktrueimg.svg" alt="判定がtrueの画像" class="m-1 stockFalseImg0">
                                     <% elsif @answer.result_pkrice == false %>
-                                      <img src="/stockfalseimg.svg" alt="判定がtrueの画像" class="m-1 stockTrueImg0">
+                                      <img src="/stockfalseimg.svg" alt="判定がfalseの画像" class="m-1 stockTrueImg0">
                                     <% end %>
                                   </td>
                                 </tr>
                     
                                 <tr>
-                                  <td class="itemName"><img src="/itemIcon-009.svg" alt="シリアルの画像" class="m-1 stockItemImg pr-2"><strong>その他・シリアルなど</strong></td>
+                                  <td class="itemName"><img src="/itemIcon-009.svg" alt="sakuSAKU備蓄チェックーシリアルの画像" class="m-1 stockItemImg pr-2"><strong>その他・シリアルなど</strong></td>
                                   <td class="answers" id="answer8"> <span class="answer"><%= @answer.cereal_etc %></span><small> 個</small></td class="answers">
                                   <td id="require8"> <span class="required"><%= @answer.required_etc %></span><small> 個</small></td>
                                   <td style="width:100px">
                                     <% if @answer.result_etc == true %>
-                                      <img src="/stocktrueimg.svg" alt="判定がfalseの画像" class="m-1 stockFalseImg0">
+                                      <img src="/stocktrueimg.svg" alt="判定がtrueの画像" class="m-1 stockFalseImg0">
                                     <% elsif @answer.result_etc == false %>
-                                      <img src="/stockfalseimg.svg" alt="判定がtrueの画像" class="m-1 stockTrueImg0">
+                                      <img src="/stockfalseimg.svg" alt="判定がfalseの画像" class="m-1 stockTrueImg0">
                                     <% end %>
                                   </td>
                                 </tr>
                     
                                 <tr>
-                                  <td class="itemName"><img src="/itemIcon-011.svg" alt="レトルト食品１の画像" class="m-1 stockItemImg pr-2"><strong>レトルト食品-1</strong></td>
+                                  <td class="itemName"><img src="/itemIcon-011.svg" alt="sakuSAKU備蓄チェックーレトルト食品１の画像" class="m-1 stockItemImg pr-2"><strong>レトルト食品-1</strong></td>
                                   <td class="answers" id="answer9"> <span class="answer"><%= @answer.retort_food1 %></span><small> 個</small></td class="answers">
                                   <td id="require9"> <span class="required"><%= @answer.required_retort_1 %></span><small> 個</small></td>
                                   <td style="width:100px">
                                     <% if @answer.result_retort_1 == true %>
-                                      <img src="/stocktrueimg.svg" alt="判定がfalseの画像" class="m-1 stockFalseImg0">
+                                      <img src="/stocktrueimg.svg" alt="判定がtrueの画像" class="m-1 stockFalseImg0">
                                     <% elsif @answer.result_retort_1 == false %>
-                                      <img src="/stockfalseimg.svg" alt="判定がtrueの画像" class="m-1 stockTrueImg0">
+                                      <img src="/stockfalseimg.svg" alt="判定がfalseの画像" class="m-1 stockTrueImg0">
                                     <% end %>
                                   </td>
                                 </tr>
                     
                                 <tr>
-                                  <td class="itemName"><img src="/itemIcon-010.svg" alt="レトルト食品２の画像" class="m-1 stockItemImg pr-2"><strong>レトルト食品-2</strong></td>
+                                  <td class="itemName"><img src="/itemIcon-010.svg" alt="sakuSAKU備蓄チェックーレトルト食品２の画像" class="m-1 stockItemImg pr-2"><strong>レトルト食品-2</strong></td>
                                   <td class="answers" id="answer10"> <span class="answer"><%= @answer.retort_food2 %></span><small> 個</small></td class="answers">
                                   <td id="require10">  <span class="required"><%= @answer.required_retort_2 %></span><small> 個</small></td>
                                   <td style="width:100px">
                                     <% if @answer.result_retort_2 == true %>
-                                      <img src="/stocktrueimg.svg" alt="判定がfalseの画像" class="m-1 stockFalseImg0">
+                                      <img src="/stocktrueimg.svg" alt="判定がtrueの画像" class="m-1 stockFalseImg0">
                                     <% elsif @answer.result_retort_2 == false %>
-                                      <img src="/stockfalseimg.svg" alt="判定がtrueの画像" class="m-1 stockTrueImg0">
+                                      <img src="/stockfalseimg.svg" alt="判定がfalseの画像" class="m-1 stockTrueImg0">
                                     <% end %>
                                   </td>
                                 </tr>
                     
                                 <tr>
-                                  <td class="itemName"><img src="/itemIcon-012.svg" alt="缶詰の画像" class="m-1 stockItemImg pr-2"><strong>缶詰（肉・魚）</strong></td>
+                                  <td class="itemName"><img src="/itemIcon-012.svg" alt="sakuSAKU備蓄チェックー缶詰の画像" class="m-1 stockItemImg pr-2"><strong>缶詰（肉・魚）</strong></td>
                                   <td class="answers" id="answer11"> <span class="answer"><%= @answer.canned_food %></span><small> 個</small></td class="answers">
                                   <td id="require11"> <span class="required"><%= @answer.required_canned %></span><small> 個</small></td>
                                   <td style="width:100px">
                                     <% if @answer.result_canned == true %>
-                                      <img src="/stocktrueimg.svg" alt="判定がfalseの画像" class="m-1 stockFalseImg0">
+                                      <img src="/stocktrueimg.svg" alt="判定がtrueの画像" class="m-1 stockFalseImg0">
                                     <% elsif @answer.result_canned == false %>
-                                      <img src="/stockfalseimg.svg" alt="判定がtrueの画像" class="m-1 stockTrueImg0">
+                                      <img src="/stockfalseimg.svg" alt="判定がfalseの画像" class="m-1 stockTrueImg0">
                                     <% end %>
                                   </td>
                                 </tr>
                             </table>
 
                           <div class="myMemo mt-3" id="myMemo">
-                            <img src="/resultSaveHeader02.svg" alt="">
+                            <img src="/resultSaveHeader02.svg" alt="sakuSAKU備蓄チェックー">
                             <h3 class="py-3 showWeeklyText">追加登録日：<%= @answer.updated_at.strftime('%Y年%m月%d日')  %></h3>
                             <table border="1" class="showtable answerTable mx-auto" width="90%">
                               <thead class="bg-dark">
@@ -243,34 +243,34 @@
                                   </tr>
                               </thead>
                               <tr>
-                                  <td class="p-1" width="15%" id="firstMemo"><%= @answer.user_item_1 %> </td>
-                                  <td class="p-1" width="10%"><%= @answer.user_requied_num_1 %>日分 </td>
-                                  <td class="p-1" width="10%"><%= @answer.user_result_num_1 %>個 </td>
-                                  <td class="p-1" width="55%"><%= @answer.user_memo_1 %> </td>
+                                  <td class="p-1" width="25%" id="firstMemo"><%= @answer.user_item_1 %> </td>
+                                  <td class="p-1" width="10%"><%= @answer.user_requied_num_1 %><small>日分</small>  </td>
+                                  <td class="p-1" width="10%"><%= @answer.user_result_num_1 %><small>個</small> </td>
+                                  <td class="p-1" width="45%"><%= @answer.user_memo_1 %> </td>
                               </tr>
                               <tr>
-                                  <td class="p-1" width="15%" ><%= @answer.user_item_2 %> </td>
-                                  <td class="p-1" width="10%"><%= @answer.user_requied_num_2 %>日分 </td>
-                                  <td class="p-1" width="10%"><%= @answer.user_result_num_2 %>個 </td>
-                                  <td class="p-1" width="55%"><%= @answer.user_memo_2 %> </td>
+                                  <td class="p-1" width="25%" ><%= @answer.user_item_2 %> </td>
+                                  <td class="p-1" width="10%"><%= @answer.user_requied_num_2 %><small>日分</small>  </td>
+                                  <td class="p-1" width="10%"><%= @answer.user_result_num_2 %><small>個</small> </td>
+                                  <td class="p-1" width="45%"><%= @answer.user_memo_2 %> </td>
                               </tr>
                               <tr>
-                                  <td class="p-1" width="15%" ><%= @answer.user_item_3 %> </td>
-                                  <td class="p-1" width="10%"><%= @answer.user_requied_num_3 %>日分 </td>
-                                  <td class="p-1" width="10%"><%= @answer.user_result_num_3 %>個 </td>
-                                  <td class="p-1" width="55%"><%= @answer.user_memo_3 %> </td>
+                                  <td class="p-1" width="25%" ><%= @answer.user_item_3 %> </td>
+                                  <td class="p-1" width="10%"><%= @answer.user_requied_num_3 %><small>日分</small>  </td>
+                                  <td class="p-1" width="10%"><%= @answer.user_result_num_3 %><small>個</small> </td>
+                                  <td class="p-1" width="45%"><%= @answer.user_memo_3 %> </td>
                               </tr>
                               <tr>
-                                  <td class="p-1" width="15%" ><%= @answer.user_item_4 %> </td>
-                                  <td class="p-1" width="10%"><%= @answer.user_requied_num_4 %>日分 </td>
-                                  <td class="p-1" width="10%"><%= @answer.user_result_num_4 %>個 </td>
-                                  <td class="p-1" width="55%"><%= @answer.user_memo_4 %> </td>
+                                  <td class="p-1" width="25%" ><%= @answer.user_item_4 %> </td>
+                                  <td class="p-1" width="10%"><%= @answer.user_requied_num_4 %><small>日分</small>  </td>
+                                  <td class="p-1" width="10%"><%= @answer.user_result_num_4 %><small>個</small> </td>
+                                  <td class="p-1" width="45%"><%= @answer.user_memo_4 %> </td>
                               </tr>
                               <tr>
-                                  <td class="p-1" width="15%" ><%= @answer.user_item_5 %> </td>
-                                  <td class="p-1" width="10%"><%= @answer.user_requied_num_5 %>日分 </td>
-                                  <td class="p-1" width="10%"><%= @answer.user_result_num_5 %>個 </td>
-                                  <td class="p-1" width="55%"><%= @answer.user_memo_5 %> </td>
+                                  <td class="p-1" width="25%" ><%= @answer.user_item_5 %> </td>
+                                  <td class="p-1" width="10%"><%= @answer.user_requied_num_5 %><small>日分</small>  </td>
+                                  <td class="p-1" width="10%"><%= @answer.user_result_num_5 %><small>個</small> </td>
+                                  <td class="p-1" width="45%"><%= @answer.user_memo_5 %> </td>
                               </tr>
                           </table>
                           <hr>

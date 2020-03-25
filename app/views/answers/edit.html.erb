@@ -2,7 +2,7 @@
 
 <div class="headerImgBox" id="headerImg">
     <div class="headerImg">
-        <img src="/newHeaderImg-03.svg" alt="新規アンケート回答ページのヘッダー画像" class="answersNewHeaderImg">
+        <img src="/addHeaderImg.svg" alt="sakuSAKU備蓄チェックー「追加アイテムを登録」のヘッダー画像" class="answersNewHeaderImg">
     </div>
 </div>
 
@@ -14,7 +14,7 @@
             <div class="container sectionBox">
                 <div class="row">
                     <div class="container">
-                        <img src="/newSubtitle-02.svg" alt="" class="mb-3">
+                        <img src="/newSubtitle-02.svg" alt="sakuSAKU備蓄チェックー新規チェックのタイトル画像" class="mb-3">
                         <div class="container-fluid">
                         <h4 class="text-center text-danger">※氏名、メールアドレスなどの個人を特定する情報は含まれません。</h4>
 
@@ -31,13 +31,13 @@
             <div class="container sectionBox">
                 <div class="row">
                     <div class="container">
-                        <img src="/newSubtitle-03.svg" alt="" class="mb-3">
+                        <img src="/newSubtitle-03.svg" alt="sakuSAKU備蓄チェックー「備蓄数の登録1」ヘッダー画像" class="mb-3">
                         <div class="container-fluid">
                             <h4 class="text-center">各アイテムのご自宅にストックしている数量を入力してください。</h4>
                             <p class="text-center">※備蓄が無い場合は、0 "ゼロ"を入力してください。</p class="text-center">
                             <div class="container enqueteBox" id="enqueteBox1">
                                 <div class="hitsujuhinBox" id="category1">
-                                <img src="/subTitle-01.svg" alt="" class=" mx-auto d-block subTitle">
+                                <img src="/subTitle-01.svg" alt="sakuSAKU備蓄チェックー" class=" mx-auto d-block subTitle">
                                 <hr>
                                     <div class="row questionSentence mb-1" id="question1">
                                         <!-- <div class="col-2 text-right">No.1</div> -->
@@ -75,7 +75,7 @@
                                 </div>
                                 
                                 <div class="shushokuBox" id="category2">
-                                <img src="/subTitle-02.svg" alt="" class=" mx-auto d-block subTitle">
+                                <img src="/subTitle-02.svg" alt="sakuSAKU備蓄チェックー「備蓄数の登録2」ヘッダー画像" class=" mx-auto d-block subTitle">
                                 <hr>
                                     <div class="row questionSentence mb-1" id="question4">
                                         <!-- <div class="col-2 text-right">No.4</div> -->
@@ -155,7 +155,7 @@
                                 </div>
 
                                 <div class="shusaiBox" id="category3">
-                                <img src="/subTitle-03.svg" alt="" class=" mx-auto d-block subTitle">
+                                <img src="/subTitle-03.svg" alt="sakuSAKU備蓄チェックー「備蓄数の登録3」ヘッダー画像" class=" mx-auto d-block subTitle">
                                 <hr>
                                     <div class="row questionSentence mb-1" id="question10">
                                         <!-- <div class="col-2 text-right">No.10</div> -->
@@ -205,7 +205,7 @@
             <div class="container sectionBox">
                 <div class="row">
                     <div class="container">
-                        <img src="/editSubtitle-04.svg" alt="" class="mb-3">
+                        <img src="/editSubtitle-04.svg" alt="sakuSAKU備蓄チェックー「自分専用アイテムの登録」ヘッダー画像" class="mb-3">
                         <div class="container-fluid">
                             <h4 class="text-center">「備蓄チェック」に記載以外のアイテムで、ご自宅に必要な備蓄品を登録できます。</h4>
                             <p class="text-center">※こちらに入力した内容は、回答一覧のリストには表示されません。<br>
@@ -215,46 +215,46 @@
 
                             <div class="container enqueteBox" id="enqueteBox1">
                                 <div class="hitsujuhinBox" id="category1">
-                                <img src="/subTitle-04.svg" alt="" class=" mx-auto d-block subTitle">
+                                <img src="/subTitle-04.svg" alt="sakuSAKU備蓄チェックー" class=" mx-auto d-block subTitle">
                                 <hr>
                                     <table border="1" class="mx-auto" width="90%">
                                         <thead>
                                             <tr>
-                                            <th class="userItemCol_1 text-center">アイテム名/15文字まで</th>
+                                            <th class="userItemCol_1 text-center">アイテム名/<small>15文字まで</small></th>
                                             <th class="userItemCol_1 text-center">想定日数</th>
                                             <th class="userItemCol_1 text-center">必要数</th>
-                                            <th class="userItemCol_1 text-center">メモ/50文字まで</th>
+                                            <th class="userItemCol_1 text-center">メモ/<small>50文字まで</small></th>
                                             </tr>
                                         </thead>
                                         <tr>
                                             <td class="p-1"><%= f.text_field :user_item_1, class: "", size: 18, maxlength: 15 %> </td>
-                                            <td class="p-1"><%= f.number_field :user_requied_num_1, class: "text-right", :step => 1, min: 0, value:0 %>日分 </td>
-                                            <td class="p-1"><%= f.number_field :user_result_num_1, class: "text-right", :step => 1, min: 0, value:0 %>個 </td>
-                                            <td class="p-1"><%= f.text_field :user_memo_1, class: "", size: 45, maxlength: 50 %> </td>
+                                            <td class="p-1"><%= f.number_field :user_requied_num_1, class: "text-right", :step => 1, min: 0, value:0 %><small>日分</small> </td>
+                                            <td class="p-1"><%= f.number_field :user_result_num_1, class: "text-right", :step => 1, min: 0, value:0 %><small>個</small> </td>
+                                            <td class="p-1"><%= f.text_field :user_memo_1, class: "", size: 35, maxlength: 50 %> </td>
                                         </tr>
                                         <tr>
                                             <td class="p-1"><%= f.text_field :user_item_2, class: "hoge", size: 18, maxlength: 15 %> </td>
-                                            <td class="p-1"><%= f.number_field :user_requied_num_2, class: "text-right", :step => 1, min: 0, value:0 %>日分 </td>
-                                            <td class="p-1"><%= f.number_field :user_result_num_2, class: "text-right", :step => 1, min: 0, value:0 %>個 </td>
-                                            <td class="p-1"><%= f.text_field :user_memo_2, class: "hoge", size: 45, maxlength: 50 %> </td>
+                                            <td class="p-1"><%= f.number_field :user_requied_num_2, class: "text-right", :step => 1, min: 0, value:0 %><small>日分</small> </td>
+                                            <td class="p-1"><%= f.number_field :user_result_num_2, class: "text-right", :step => 1, min: 0, value:0 %><small>個</small> </td>
+                                            <td class="p-1"><%= f.text_field :user_memo_2, class: "hoge", size: 35, maxlength: 50 %> </td>
                                         </tr>
                                         <tr>
                                             <td class="p-1"><%= f.text_field :user_item_3, class: "hoge", size: 18, maxlength: 15 %> </td>
-                                            <td class="p-1"><%= f.number_field :user_requied_num_3, class: "text-right", :step => 1, min: 0, value:0 %>日分 </td>
-                                            <td class="p-1"><%= f.number_field :user_result_num_3, class: "text-right", :step => 1, min: 0, value:0 %>個 </td>
-                                            <td class="p-1"><%= f.text_field :user_memo_3, class: "hoge", size: 45, maxlength: 50 %> </td>
+                                            <td class="p-1"><%= f.number_field :user_requied_num_3, class: "text-right", :step => 1, min: 0, value:0 %><small>日分</small> </td>
+                                            <td class="p-1"><%= f.number_field :user_result_num_3, class: "text-right", :step => 1, min: 0, value:0 %><small>個</small> </td>
+                                            <td class="p-1"><%= f.text_field :user_memo_3, class: "hoge", size: 35, maxlength: 50 %> </td>
                                         </tr>
                                         <tr>
                                             <td class="p-1"><%= f.text_field :user_item_4, class: "hoge", size: 18, maxlength: 15 %> </td>
-                                            <td class="p-1"><%= f.number_field :user_requied_num_4, class: "text-right", :step => 1, min: 0, value:0 %>日分 </td>
-                                            <td class="p-1"><%= f.number_field :user_result_num_4, class: "text-right", :step => 1, min: 0, value:0 %>個 </td>
-                                            <td class="p-1"><%= f.text_field :user_memo_4, class: "hoge", size: 45, maxlength: 50 %> </td>
+                                            <td class="p-1"><%= f.number_field :user_requied_num_4, class: "text-right", :step => 1, min: 0, value:0 %><small>日分</small> </td>
+                                            <td class="p-1"><%= f.number_field :user_result_num_4, class: "text-right", :step => 1, min: 0, value:0 %><small>個</small> </td>
+                                            <td class="p-1"><%= f.text_field :user_memo_4, class: "hoge", size: 35, maxlength: 50 %> </td>
                                         </tr>
                                         <tr>
                                             <td class="p-1"><%= f.text_field :user_item_5, class: "hoge", size: 18, maxlength: 15 %> </td>
-                                            <td class="p-1"><%= f.number_field :user_requied_num_5, class: "text-right", :step => 1, min: 0, value:0 %>日分 </td>
-                                            <td class="p-1"><%= f.number_field :user_result_num_5, class: "text-right", :step => 1, min: 0, value:0 %>個 </td>
-                                            <td class="p-1"><%= f.text_field :user_memo_5, class: "hoge", size: 45, maxlength: 50 %> </td>
+                                            <td class="p-1"><%= f.number_field :user_requied_num_5, class: "text-right", :step => 1, min: 0, value:0 %><small>日分</small> </td>
+                                            <td class="p-1"><%= f.number_field :user_result_num_5, class: "text-right", :step => 1, min: 0, value:0 %><small>個</small> </td>
+                                            <td class="p-1"><%= f.text_field :user_memo_5, class: "hoge", size: 35, maxlength: 50 %> </td>
                                         </tr>
                                     </table>
 
