@@ -13,18 +13,22 @@
 
     <%= analytics_init if Rails.env.production? %>
     
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+
   </head>
 
   <body>
+
+
   
     <header class="headerBox sticky-top">
       <div class="navBox w-100 py-2 pr-3 text-right navBoxBC">
           <div class="navList text-center" id="nav">
               <ul class="w-100 m-0">
                 <%= link_to 'Top', root_path ,class:"headerDropdownTitle mx-3"%>
-                <%= link_to '回答一覧を見る', answers_path ,class:"headerDropdownTitle mx-3"%>
                 <%= link_to '備蓄をチェックする', new_answer_path ,class:"headerDropdownTitle mx-3 bg-danger p-2"%>
-                <%= link_to '備蓄の準備', forstocks_path, class: 'headerDropdownTitle mx-3' %>
+                <%= link_to '回答一覧を見る', answers_path ,class:"headerDropdownTitle mx-3"%>
+                <%= link_to '備蓄アイテムの準備', forstocks_path, class: 'headerDropdownTitle mx-3' %>
               </ul> 
           </div>
       </div>
@@ -44,5 +48,7 @@
         <p>&copy; 2019-<script>document.write(new Date().getFullYear());</script> sakuSAkU備蓄チェック運営</p>
       </div>
     </div>
+      <div id="page_top"><a href="#"></a></div>
+
   </body>
 </html>

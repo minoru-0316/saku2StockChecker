@@ -65,3 +65,5 @@ end
 gem 'google-analytics-rails'
 
 gem 'meta-tags'
+
+gem 'font-awesome-rails'
