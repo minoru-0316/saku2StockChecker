@@ -134,6 +134,7 @@ class AnswersController < ApplicationController
 
     def update
       @answer = Answer.find(params[:id])
+      @answer.update(answer_params)
 
               # 1: 必要数の算出（世帯人数とstockplainsの各基準値を掛ける・eachでループさせる）
               @stockplains = Stockplain.all
@@ -223,7 +224,7 @@ class AnswersController < ApplicationController
                   @answer.result_etc = false
                 end
               # 【判定】レトルト食品-1
-              if @answer.required_retort_1 > @answer.retort_food1
+              if @answer.required_retort_1 <= @answer.retort_food1
                 @answer.result_retort_1 = true
               elsif @answer.required_retort_1 > @answer.retort_food1
                   @answer.result_retort_1 = false

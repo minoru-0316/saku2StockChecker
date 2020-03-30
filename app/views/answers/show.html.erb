@@ -12,7 +12,7 @@
         <div class="container sectionBox">
             <div class="row">
                 <div class="container">
-                    <img src="/showTitle01.svg" alt="sakuSAKU備蓄チェックー「結果発表」バナー画像" class="showTitle01 mb-3">
+                    <img src="/showTitle01_2.svg" alt="sakuSAKU備蓄チェックー「結果発表」バナー画像" class="showTitle01 mb-3">
                     <div class="thanksMessage container-fluid mainTextBox mb-3">
                           <p class="text-center my-auto mb-3">
                               <strong>
@@ -21,21 +21,23 @@
                               「想像していたよりも目安量が多くてビックリ！」された方もいらっしゃったかも知れませんね。<br>
                                 目安量は、出典元の厚生労働省の情報です。あくまで目安ですのでこちらの結果を参考にして<br>
                                 家族構成や状況に合わせた備蓄を考えるきっかけにされてはいかがでしょうか。<br>
-                                <p class="text-danger my-2 text-center">※再度、このページを開きたい方は、忘れずに<span class="topContent">ブックマーク</span>してください。</p>
+                                <p class="text-danger my-2 text-center">※再度このページを開きたい方は、忘れずに<span class="topContent">ブックマーク</span>してください。</p>
                               </strong>
                           </p>
                           <div class="container-fluid my-2">
+
                             <div class="text-center my-2">
                               <div class="print-btn btn-square-shadow">
                               結果を <span class="BtnTexts"> 印刷 / 保存</span>する
                               </div>
                             </div>
-                            <div class="text-center my-2">
-                              <div class="update-btn updateBtn-square-shadow BtnTexts "> 
-                                <%= link_to "追加アイテムの登録" ,edit_answer_path(@answer) , class: "BtnTexts"%>
+                            <div class="text-left my-2">
+                              <strong>備蓄状況の「更新」と アイテムを「追加」>></strong>
+                            
+                              <div class="update-btn updateBtn-square-shadow BtnTexts text-center"> 
+                              <%= link_to "更新 / アイテム追加" ,edit_answer_path(@answer) , class: "BtnTexts"%>
                               </div>
                             </div>
-
                             <div class="text-center my-2">
                               <div class="forstock-btn forstockBtn-square-shadow BtnTexts "> 
                                 <%= link_to "備蓄アイテムの準備" ,forstocks_path , class: "forstockBtnTexts"%>
@@ -290,11 +292,25 @@
                       </div>
                   </div>
 
-                  <div class="container-fluid my-2">
-                      <div class="text-center my-2">
+                <hr>
+                  <div class="container-fluid my-2 mainTextBox">
+                    <div class="row">
+                      <div class="col-sm-4 text-center my-2">
                         <div class="print-btn btn-square-shadow">
-                          結果を <span class="BtnTexts"> 印刷 / 保存</span>する
+                        結果を <span class="BtnTexts"> 印刷 / 保存</span>する
                         </div>
+                      </div>
+                      <div class="col-sm-4 text-center my-2">
+                        <div class="update-btn updateBtn-square-shadow BtnTexts "> 
+                          <%= link_to "更新 / アイテム追加" ,edit_answer_path(@answer) , class: "BtnTexts"%>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 text-center my-2">
+                        <div class="forstock-btn forstockBtn-square-shadow BtnTexts "> 
+                          <%= link_to "備蓄アイテムの準備" ,forstocks_path , class: "forstockBtnTexts"%>
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
                 </div>

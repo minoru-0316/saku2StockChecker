@@ -2,7 +2,7 @@
 
 <div class="headerImgBox" id="headerImg">
     <div class="headerImg">
-        <img src="/addHeaderImg.svg" alt="sakuSAKU備蓄チェックー「追加アイテムを登録」のヘッダー画像" class="answersNewHeaderImg">
+        <img src="/addHeaderImg-01.svg" alt="sakuSAKU備蓄チェックー「追加アイテムを登録」のヘッダー画像" class="answersNewHeaderImg">
     </div>
 </div>
 
@@ -10,14 +10,26 @@
     
 <!-- article -1 -->
     <article class="art_1 mx-auto" id="art_1Box">
-        <section class="sect_2 mt-5 d-none" id="box2">
-            <div class="container sectionBox">
+        <section class="sect_2 mt-5" id="box2">
+            <div class="container">
                 <div class="row">
+                    <div class="col-sm-6 text-center">
+                        <a href="#box2">
+                            <div class="updateBtn-square-shadow">
+                                備蓄を<span class="editBtnTexts"> 更新</span>する
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <a href="#box4">
+                            <div class="updateBtn-square-shadow">
+                                アイテムを<span class="editBtnTexts"> 追加</span>する
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6"></div>
                     <div class="container">
-                        <img src="/newSubtitle-02.svg" alt="sakuSAKU備蓄チェックー新規チェックのタイトル画像" class="mb-3">
-                        <div class="container-fluid">
-                        <h4 class="text-center text-danger">※氏名、メールアドレスなどの個人を特定する情報は含まれません。</h4>
-
                         <%= form_for(@answer) do |f| %>
                 </div>
             </div>
@@ -27,11 +39,11 @@
 
 <!-- article -2 -->
     <article class="art_2 mx-auto" id="art_2Box">
-        <section class="sect_1 mt-5 d-none" id="box3">
+        <section class="sect_1 mt-5 " id="box3">
             <div class="container sectionBox">
                 <div class="row">
                     <div class="container">
-                        <img src="/newSubtitle-03.svg" alt="sakuSAKU備蓄チェックー「備蓄数の登録1」ヘッダー画像" class="mb-3">
+                        <img src="/updateSubtitle-01.svg" alt="sakuSAKU備蓄チェックー「備蓄数の登録1」ヘッダー画像" class="mb-3">
                         <div class="container-fluid">
                             <h4 class="text-center">各アイテムのご自宅にストックしている数量を入力してください。</h4>
                             <p class="text-center">※備蓄が無い場合は、0 "ゼロ"を入力してください。</p class="text-center">
@@ -201,7 +213,7 @@
             </div>
         </section>
 
-        <section class="sect_2 mt-5" id="box3">
+        <section class="sect_2 mt-5" id="box4">
             <div class="container sectionBox">
                 <div class="row">
                     <div class="container">
