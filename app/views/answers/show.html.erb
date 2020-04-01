@@ -19,32 +19,34 @@
                               「sakuSAKU 備蓄チェック」のご利用ありがとうございます。<br>
                               結果はいかがでしたか？<br>
                               「想像していたよりも目安量が多くてビックリ！」された方もいらっしゃったかも知れませんね。<br>
-                                目安量は、出典元の厚生労働省の情報です。あくまで目安ですのでこちらの結果を参考にして<br>
+                                目安量は、出典元の農林水産省の情報です。あくまで目安ですのでこちらの結果を参考にして<br>
                                 家族構成や状況に合わせた備蓄を考えるきっかけにされてはいかがでしょうか。<br>
-                                <p class="text-danger my-2 text-center">※再度このページを開きたい方は、忘れずに<span class="topContent">ブックマーク</span>してください。</p>
+                            <strong>
+                              <p class="text-light my-2 text-center bg-dark py-2" style="font-size: 1.5rem">※後で確認するには、必ず<span class="bookmarkMessage mx-2">ブックマーク</span>してください。</p>
+                            </strong>
                               </strong>
                           </p>
-                          <div class="container-fluid my-2">
 
-                            <div class="text-center my-2">
-                              <div class="print-btn btn-square-shadow">
-                              結果を <span class="BtnTexts"> 印刷 / 保存</span>する
-                              </div>
-                            </div>
-                            <div class="text-left my-2">
-                              <strong>備蓄状況の「更新」と アイテムを「追加」>></strong>
-                            
-                              <div class="update-btn updateBtn-square-shadow BtnTexts text-center"> 
-                              <%= link_to "更新 / アイテム追加" ,edit_answer_path(@answer) , class: "BtnTexts"%>
-                              </div>
-                            </div>
-                            <div class="text-center my-2">
-                              <div class="forstock-btn forstockBtn-square-shadow BtnTexts "> 
-                                <%= link_to "備蓄アイテムの準備" ,forstocks_path , class: "forstockBtnTexts"%>
-                              </div>
-                            </div>
+                  <div class="container-fluid my-2 mainTextBox">
+                    <div class="row">
+                      <div class="col-sm-4 text-center my-2">
+                        <div class="print-btn btn-square-shadow">
+                        結果を <span class="BtnTexts"> 印刷 / 保存</span>する
+                        </div>
+                      </div>
+                      <div class="col-sm-4 text-center my-2">
+                        <div class="update-btn updateBtn-square-shadow BtnTexts "> 
+                          <%= link_to "更新 / アイテム追加" ,edit_answer_path(@answer) , class: "BtnTexts"%>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 text-center my-2">
+                        <div class="forstock-btn forstockBtn-square-shadow BtnTexts "> 
+                          <%= link_to "備蓄アイテムの準備" ,forstocks_path , class: "forstockBtnTexts"%>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-                          </div>
 
                         </div>
                       </div>
@@ -317,9 +319,9 @@
             </div>
         </div>
       </section>
-      
-      <p class="text-danger my-2 text-center bg-light">※再度、このページを開きたい方は、忘れずに<span class="topContent">ブックマーク</span>してください。</p>
-
+      <strong>
+        <p class="text-light my-2 text-center bg-dark py-2" style="font-size: 1.5rem">※後で確認するには、必ず<span class="bookmarkMessage mx-2">ブックマーク</span>してください。</p>
+      </strong>
     </article>
 </main>
 

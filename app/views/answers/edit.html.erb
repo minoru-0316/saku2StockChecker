@@ -55,7 +55,7 @@
                                         <!-- <div class="col-2 text-right">No.1</div> -->
                                         <div class="col-6 text-center">飲料水（2リットル）<span class="small">※単位：本</span></div>
                                         <div class="col-6 field">
-                                            <%= f.number_field :bottolwater_2L, :step => 1, min: 0, class: "answerFiled text-right", id: "answer1" %> 本
+                                            <%= f.number_field :bottolwater_2L, :step => 1, min: 0, class: "answerFiled text-right selectArea", id: "answer1" %> 本
                                         </div>
                                         
                                         <div class="col-2 field requiredNum">
@@ -67,7 +67,7 @@
                                         <!-- <div class="col-2 text-right">No.2</div> -->
                                         <div class="col-6 text-center">カセットコンロ<span class="small"> ※単位：台</span></div>
                                         <div class="col-6 field">
-                                            <%= f.number_field :cooking_stove, :step => 1, min: 0, class: "answerFiled text-right", id: "answer2" %> 台
+                                            <%= f.number_field :cooking_stove, :step => 1, min: 0, class: "answerFiled text-right selectArea", id: "answer2" %> 台
                                         </div>
                                         <div class="col-2 field requiredNum d-none ">
                                             <% f.text_field :required_stove, class: "requiredField", id: "required2" %> 
@@ -78,7 +78,7 @@
                                         <!-- <div class="col-2 text-right">No.3</div> -->
                                         <div class="col-6 text-center">カセットボンベ<span class="small"> ※単位：本</span></div>
                                         <div class="col-6 field">
-                                            <%= f.number_field :cassette_gas, :step => 1, min: 0, class: "answerFiled text-right", id: "answer3" %> 本
+                                            <%= f.number_field :cassette_gas, :step => 1, min: 0, class: "answerFiled text-right selectArea", id: "answer3" %> 本
                                         </div>
                                         <div class="col-2 field requiredNum d-none ">
                                             <% f.text_field :required_gas, class: "requiredField", id: "required3" %> 
@@ -95,7 +95,7 @@
                                             <p class="container small">※お米の現在量（kg）を記入ください</p>
                                         </div>
                                         <div class="col-6 field">
-                                            <%= f.number_field :rice_2kg, :step => 1, min: 0, class: "answerFiled text-right", id: "answer4" %> kg
+                                            <%= f.number_field :rice_2kg, :step => 1, min: 0, class: "answerFiled text-right selectArea", id: "answer4" %> kg
                                         </div>
                                         <hr>
                                         <div class="col-2 field requiredNum d-none ">
@@ -109,7 +109,7 @@
                                         <p class="container small">※うどん・そば・そうめんなど</p>
                                         </div>
                                         <div class="col-6 field">
-                                            <%= f.number_field :dried_noodle, :step => 1, min: 0, class: "answerFiled text-right", id: "answer5" %> 袋
+                                            <%= f.number_field :dried_noodle, :step => 1, min: 0, class: "answerFiled text-right selectArea", id: "answer5" %> 袋
                                         </div>
                                         
                                         <div class="col-2 field requiredNum d-none ">
@@ -121,7 +121,7 @@
                                         <!-- <div class="col-2 text-right">No.6</div> -->
                                         <div class="col-6 text-center">パスタ乾麺(1袋=600g)<span class="small"> ※単位：袋</span></div>
                                         <div class="col-6 field">
-                                            <%= f.number_field :dried_pasta, :step => 1, min: 0, class: "answerFiled text-right", id: "answer6" %> 袋
+                                            <%= f.number_field :dried_pasta, :step => 1, min: 0, class: "answerFiled text-right selectArea", id: "answer6" %> 袋
                                         </div>
                                         
                                         <div class="col-2 field requiredNum d-none ">
@@ -133,7 +133,7 @@
                                         <!-- <div class="col-2 text-right">No.7</div> -->
                                         <div class="col-6 text-center">カップ麺<span class="small"> ※単位：個</span></div>
                                         <div class="col-6 field">
-                                            <%= f.number_field :cupped_noodle, :step => 1, min: 0, class: "answerFiled text-right", id: "answer7" %> 個
+                                            <%= f.number_field :cupped_noodle, :step => 1, min: 0, class: "answerFiled text-right selectArea", id: "answer7" %> 個
                                         </div>
                                         
                                         <div class="col-2 field requiredNum d-none ">
@@ -145,7 +145,7 @@
                                         <!-- <div class="col-2 text-right">No.8</div> -->
                                         <div class="col-6 text-center">パックご飯<span class="small"> ※単位：個</span></div>
                                         <div class="col-6 field">
-                                            <%= f.number_field :packed_rice, :step => 1, min: 0, class: "answerFiled text-right", id: "answer8" %> 個
+                                            <%= f.number_field :packed_rice, :step => 1, min: 0, class: "answerFiled text-right selectArea", id: "answer8" %> 個
                                         </div>
                                         
                                         <div class="col-2 field requiredNum d-none ">
@@ -157,7 +157,7 @@
                                         <!-- <div class="col-2 text-right">No.9</div> -->
                                         <div class="col-6 text-center">その他・シリアルなど<span class="small"> ※単位：個</span></div>
                                         <div class="col-6 field">
-                                            <%= f.number_field :cereal_etc, :step => 1, min: 0, class: "answerFiled text-right", id: "answer9" %> 個
+                                            <%= f.number_field :cereal_etc, :step => 1, min: 0, class: "answerFiled text-right selectArea", id: "answer9" %> 個
                                         </div>
                                         
                                         <div class="col-2 field requiredNum d-none ">
@@ -174,7 +174,7 @@
                                         <div class="col-6 text-center">レトルト食品-1<span class="small"> ※単位：個</span>
                                             <p class="container small">※牛丼の素やレトルトカレーなど</p></div>
                                         <div class="col-6 field">
-                                            <%= f.number_field :retort_food1, :step => 1, min: 0, class: "answerFiled text-right", id: "answer10" %> 個
+                                            <%= f.number_field :retort_food1, :step => 1, min: 0, class: "answerFiled text-right selectArea", id: "answer10" %> 個
                                         </div>
                                         <div class="col-2 field requiredNum d-none ">
                                             <% f.text_field :required_retort_1, class: "requiredField", id: "required10" %> 
@@ -186,7 +186,7 @@
                                         <div class="col-6 text-center">レトルト食品-2<span class="small"> ※単位：個</span>
                                             <p class="container small">※パスタソースなど</p></div>
                                         <div class="col-6 field">
-                                            <%= f.number_field :retort_food2, :step => 1, min: 0, class: "answerFiled text-right", id: "answer11" %> 個
+                                            <%= f.number_field :retort_food2, :step => 1, min: 0, class: "answerFiled text-right selectArea", id: "answer11" %> 個
                                         </div>
                                         
                                         <div class="col-2 field requiredNum d-none ">
@@ -198,7 +198,7 @@
                                         <!-- <div class="col-2 text-right">No.12</div> -->
                                         <div class="col-6 text-center">缶詰（肉・魚）<span class="small">※単位：個</span></div>
                                         <div class="col-6 field">
-                                            <%= f.number_field :canned_food, :step => 1, min: 0, class: "answerFiled text-right", id: "answer12" %> 個
+                                            <%= f.number_field :canned_food, :step => 1, min: 0, class: "answerFiled text-right selectArea", id: "answer12" %> 個
                                         </div>
                                         
                                         <div class="col-2 field requiredNum d-none ">
@@ -240,32 +240,32 @@
                                         </thead>
                                         <tr>
                                             <td class="p-1"><%= f.text_field :user_item_1, class: "", size: 18, maxlength: 15 %> </td>
-                                            <td class="p-1"><%= f.number_field :user_requied_num_1, class: "text-right", :step => 1, min: 0, value:0 %><small>日分</small> </td>
-                                            <td class="p-1"><%= f.number_field :user_result_num_1, class: "text-right", :step => 1, min: 0, value:0 %><small>個</small> </td>
+                                            <td class="p-1"><%= f.number_field :user_requied_num_1, class: "text-right selectArea", :step => 1, min: 0, value:0 %><small>日分</small> </td>
+                                            <td class="p-1"><%= f.number_field :user_result_num_1, class: "text-right selectArea", :step => 1, min: 0, value:0 %><small>個</small> </td>
                                             <td class="p-1"><%= f.text_field :user_memo_1, class: "", size: 35, maxlength: 50 %> </td>
                                         </tr>
                                         <tr>
                                             <td class="p-1"><%= f.text_field :user_item_2, class: "hoge", size: 18, maxlength: 15 %> </td>
-                                            <td class="p-1"><%= f.number_field :user_requied_num_2, class: "text-right", :step => 1, min: 0, value:0 %><small>日分</small> </td>
-                                            <td class="p-1"><%= f.number_field :user_result_num_2, class: "text-right", :step => 1, min: 0, value:0 %><small>個</small> </td>
+                                            <td class="p-1"><%= f.number_field :user_requied_num_2, class: "text-right selectArea", :step => 1, min: 0, value:0 %><small>日分</small> </td>
+                                            <td class="p-1"><%= f.number_field :user_result_num_2, class: "text-right selectArea", :step => 1, min: 0, value:0 %><small>個</small> </td>
                                             <td class="p-1"><%= f.text_field :user_memo_2, class: "hoge", size: 35, maxlength: 50 %> </td>
                                         </tr>
                                         <tr>
                                             <td class="p-1"><%= f.text_field :user_item_3, class: "hoge", size: 18, maxlength: 15 %> </td>
-                                            <td class="p-1"><%= f.number_field :user_requied_num_3, class: "text-right", :step => 1, min: 0, value:0 %><small>日分</small> </td>
-                                            <td class="p-1"><%= f.number_field :user_result_num_3, class: "text-right", :step => 1, min: 0, value:0 %><small>個</small> </td>
+                                            <td class="p-1"><%= f.number_field :user_requied_num_3, class: "text-right selectArea", :step => 1, min: 0, value:0 %><small>日分</small> </td>
+                                            <td class="p-1"><%= f.number_field :user_result_num_3, class: "text-right selectArea", :step => 1, min: 0, value:0 %><small>個</small> </td>
                                             <td class="p-1"><%= f.text_field :user_memo_3, class: "hoge", size: 35, maxlength: 50 %> </td>
                                         </tr>
                                         <tr>
                                             <td class="p-1"><%= f.text_field :user_item_4, class: "hoge", size: 18, maxlength: 15 %> </td>
-                                            <td class="p-1"><%= f.number_field :user_requied_num_4, class: "text-right", :step => 1, min: 0, value:0 %><small>日分</small> </td>
-                                            <td class="p-1"><%= f.number_field :user_result_num_4, class: "text-right", :step => 1, min: 0, value:0 %><small>個</small> </td>
+                                            <td class="p-1"><%= f.number_field :user_requied_num_4, class: "text-right selectArea", :step => 1, min: 0, value:0 %><small>日分</small> </td>
+                                            <td class="p-1"><%= f.number_field :user_result_num_4, class: "text-right selectArea", :step => 1, min: 0, value:0 %><small>個</small> </td>
                                             <td class="p-1"><%= f.text_field :user_memo_4, class: "hoge", size: 35, maxlength: 50 %> </td>
                                         </tr>
                                         <tr>
                                             <td class="p-1"><%= f.text_field :user_item_5, class: "hoge", size: 18, maxlength: 15 %> </td>
-                                            <td class="p-1"><%= f.number_field :user_requied_num_5, class: "text-right", :step => 1, min: 0, value:0 %><small>日分</small> </td>
-                                            <td class="p-1"><%= f.number_field :user_result_num_5, class: "text-right", :step => 1, min: 0, value:0 %><small>個</small> </td>
+                                            <td class="p-1"><%= f.number_field :user_requied_num_5, class: "text-right selectArea", :step => 1, min: 0, value:0 %><small>日分</small> </td>
+                                            <td class="p-1"><%= f.number_field :user_result_num_5, class: "text-right selectArea", :step => 1, min: 0, value:0 %><small>個</small> </td>
                                             <td class="p-1"><%= f.text_field :user_memo_5, class: "hoge", size: 35, maxlength: 50 %> </td>
                                         </tr>
                                     </table>
@@ -280,18 +280,173 @@
         </section>
 
         <div class="container m-3 mx-auto mainTextBox bg-light">
-        <h5 class="text-center">入力した内容で間違いなければ、追加ボタンを押してください。<br>
-        <span class="text-center">↓↓↓</span></h5>
+            <h5 class="text-center confirmAction">入力が完了したら、「確認する」を押してください。<br>
+            <span class="text-center">↓↓↓</span></h5>
             <div class="actions text-center">
-                <%= f.submit '追加ボタン', :class=>"update-btn updateBtn-square-shadow" %>
-            </div>
-            <% end %>
+            <input type="button" id="btn3" value="確認する" class="confirmBtn confirmAction">
+
+            <h5 class="text-center submitAction d-none">修正なければ「更新 / 追加する」ボタンを押してください。<br>
+            <span class="text-center">↓↓↓</span></h5>
+            <input type="button" class="submitAction d-none m-2 confirmBtn" id="btn4" value="修正する">
+
+            <%= f.submit '更新 / 追加する', :class=>"update-btn updateBtn-square-shadow submitAction d-none" %>
+        </div>
+        
+        <% end %>
         </div>
     </article>
 
 </main>
 
 
+
+<script>
+
+$(document).ready(function(){
+    $('.selectArea')
+        .focus(function(){
+            $(this).select();
+        })
+        .click(function(){
+            $(this).select();
+            return false;
+        });
+});
+
+var btn3 = document.getElementById('btn3');
+var btn4 = document.getElementById('btn4');
+
+    btn3.onclick = function() {
+        console.log("3がクリックされた");
+
+        if ($('#answer1').val() == "" ){
+            //条件に一致する場合(県名が選択されていない場合)
+            alert("「飲料水」の備蓄数を入力してください。無い場合は、数字の 0 を入力してください。");    //エラーメッセージを出力
+            $("#answer1").addClass("bg-danger");
+        }
+        else{    
+        $("#answer1").removeClass("bg-danger");
+        }
+
+        if ($('#answer2').val() == "" ){
+            //条件に一致する場合(県名が選択されていない場合)
+            alert("「ガスコンロ」の備蓄数を入力してください。無い場合は、数字の 0 を入力してください。");    //エラーメッセージを出力
+            $("#answer2").addClass("bg-danger");
+        }
+        else{    
+        $("#answer2").removeClass("bg-danger");
+        }
+
+        if ($('#answer3').val() == "" ){
+            //条件に一致する場合(県名が選択されていない場合)
+            alert("「カセットボンベ 」の備蓄数を入力してください。無い場合は、数字の 0 を入力してください。");    //エラーメッセージを出力
+            $("#answer3").addClass("bg-danger");
+        }
+        else{    
+        $("#answer3").removeClass("bg-danger");
+        }
+
+        if ($('#answer4').val() == "" ){
+            //条件に一致する場合(県名が選択されていない場合)
+            alert("「お米の現在量（kg）」を入力してください。無い場合は、数字の 0 を入力してください。");    //エラーメッセージを出力
+            $("#answer4").addClass("bg-danger");
+        }
+        else{    
+        $("#answer4").removeClass("bg-danger");
+        }
+
+            if ($('#answer5').val() == "" ){
+            //条件に一致する場合(県名が選択されていない場合)
+            alert("「乾麺（1袋 = 300g）」の備蓄数を入力してください。無い場合は、数字の 0 を入力してください。");    //エラーメッセージを出力
+            $("#answer5").addClass("bg-danger");
+        }
+        else{    
+        $("#answer5").removeClass("bg-danger");
+        }
+
+        if ($('#answer6').val() == "" ){
+            //条件に一致する場合(県名が選択されていない場合)
+            alert("「パスタ乾麺(1袋=600g)」の備蓄数を入力してください。無い場合は、数字の 0 を入力してください。");    //エラーメッセージを出力
+            $("#answer6").addClass("bg-danger");
+        }
+        else{    
+        $("#answer6").removeClass("bg-danger");
+        }
+
+        if ($('#answer7').val() == "" ){
+            //条件に一致する場合(県名が選択されていない場合)
+            alert("「カップ麺」の備蓄数を入力してください。無い場合は、数字の 0 を入力してください。");    //エラーメッセージを出力
+            $("#answer7").addClass("bg-danger");
+        }
+        else{    
+        $("#answer7").removeClass("bg-danger");
+        }
+
+        if ($('#answer8').val() == "" ){
+            //条件に一致する場合(県名が選択されていない場合)
+            alert("「パックご飯」の備蓄数を入力してください。無い場合は、数字の 0 を入力してください。");    //エラーメッセージを出力
+            $("#answer8").addClass("bg-danger");
+        }
+        else{    
+        $("#answer8").removeClass("bg-danger");
+        }
+
+        if ($('#answer9').val() == "" ){
+            //条件に一致する場合(県名が選択されていない場合)
+            alert("「その他・シリアルなど」の備蓄数を入力してください。無い場合は、数字の 0 を入力してください。");    //エラーメッセージを出力
+            $("#answer9").addClass("bg-danger");
+        }
+        else{    
+        $("#answer9").removeClass("bg-danger");
+        }
+
+        if ($('#answer10').val() == "" ){
+            //条件に一致する場合(県名が選択されていない場合)
+            alert("「レトルト食品-1 ※牛丼の素やレトルトカレーなど」の備蓄数を入力してください。無い場合は、数字の 0 を入力してください。");    //エラーメッセージを出力
+            $("#answer10").addClass("bg-danger");
+        }
+        else{    
+        $("#answer10").removeClass("bg-danger");
+        }
+
+        if ($('#answer11').val() == "" ){
+            //条件に一致する場合(県名が選択されていない場合)
+            alert("「レトルト食品-2 ※パスタソースなど」の備蓄数を入力してください。無い場合は、数字の 0 を入力してください。");    //エラーメッセージを出力
+            $("#answer11").addClass("bg-danger");
+        }
+        else{    
+        $("#answer11").removeClass("bg-danger");
+        }
+
+        if ($('#answer12').val() == "" ){
+            //条件に一致する場合(県名が選択されていない場合)
+            alert("「缶詰（肉・魚）」の備蓄数を入力してください。無い場合は、数字の 0 を入力してください。");    //エラーメッセージを出力
+            $("#answer12").addClass("bg-danger");
+        }
+        else{    
+        $("#answer12").removeClass("bg-danger");
+        }
+
+        if($(".answerFiled").hasClass("bg-danger")){
+           $(".submitAction").addClass("d-none");
+            return false;
+        }
+         else{
+            $(btn3).addClass("d-none");
+            $(".confirmAction").addClass("d-none");
+            $(".submitAction").removeClass("d-none");
+            $(".answerFiled").prop('readonly', true);
+        }
+    };
+
+    btn4.onclick = function() {
+        $(btn3).removeClass("d-none");
+        $(".confirmAction").removeClass("d-none");
+        $(".submitAction").addClass("d-none");
+        $(".answerFiled").prop('readonly', false);
+    };
+
+</script>
 
 
 

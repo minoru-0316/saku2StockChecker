@@ -123,6 +123,24 @@ table {
     border-bottom: none;
   }
 
+  .confirmBtn {
+    padding: 0.5em 1em;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    color:black;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+    background-image: linear-gradient(#ebde32 0%, #f8f674 100%);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3px #cac35e;
+  }
+  
+  .confirmBtn:active {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+  }
 
   .stockItemImg {
       width: 100px
@@ -171,7 +189,6 @@ table {
     color: #FFF;
     border-bottom: solid 4px #75b683;
     border-radius: 3px;
-    width: 250px;
   }
   .updateBtn-square-shadow:active {
     /*ボタンを押したとき*/
@@ -222,6 +239,12 @@ table {
     background: linear-gradient(transparent 60%, rgb(252, 116, 116) 0%);
   }
   
+  .bookmarkMessage {
+    color: white;
+    font-weight: bold;
+    font-size: 1.8rem;
+    background: linear-gradient(transparent 60%, rgb(253, 1, 1) 0%);
+  }
 
 
 // thの固定
@@ -288,3 +311,4 @@ textarea {
 .editTable {
   width:90%
 }
+
