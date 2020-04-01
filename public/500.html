@@ -54,9 +54,9 @@
   </style>
 
   <script>
-  setTimeout(function(){
-  window.location.href = 'tops#index';
-}, 5*1000);
+    setTimeout(function(){
+    window.location.href = 'tops#index';
+  }, 5*1000);
 </script>
 
 </head>
@@ -69,7 +69,14 @@
     <div>
       <h1>アクセスしようとしたページは表示できませんでした。</h1>
     </div>
-    <p>5秒後にトップページへ移動します。</p>
+    <p>5秒後にトップページへ移動します。<br>
+      ページが切り替わらない場合は、<br>以下のリンクをクリックしてください。
+    </p>
+    <div class="container text-center">
+      <a href="tops#index">
+        <p>トップページへ戻る</p>
+      </a>
+    </div>
   </div>
 </body>
 </html>
