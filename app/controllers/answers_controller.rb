@@ -251,6 +251,15 @@ class AnswersController < ApplicationController
       end
     end
 
+
+    def destroy
+      @answer = Answer.find(params[:id])
+
+      @answer.destroy
+      redirect_to answers_path
+      flash[:notice] = "回答を削除しました。"
+  end
+
     
     private
     def answer_params
